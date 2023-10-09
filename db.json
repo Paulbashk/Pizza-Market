@@ -1,0 +1,441 @@
+{
+  "banners": [
+    {
+      "id": 0,
+      "image": "/promo/promo3999.jpg",
+      "title": "Скидка 40% по промокоду",
+      "desc": "Дарим скидку 40% на заказ от 3999 рублей. Скидка действует до 01.01.2099 включительно по промокоду: promo3999"
+    },
+    {
+      "id": 1,
+      "image": "/promo/promo999.jpg",
+      "title": "Скидка 25% по промокоду",
+      "desc": "Дарим скидку 25% на заказ от 999 рублей. Скидка действует до 01.01.2069 включительно по промокоду: promo999"
+    }
+  ],
+  "categories": [
+    {
+      "id": 0,
+      "name": "Пиццы",
+      "slug": "/"
+    },
+    {
+      "id": 1,
+      "name": "Напитки",
+      "slug": "drink"
+    },
+    {
+      "id": 2,
+      "name": "Закуски",
+      "slug": "snacks"
+    }
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "category": 0,
+      "name": "Мясные"
+    },
+    {
+      "id": 1,
+      "category": 0,
+      "name": "Грибные"
+    },
+    {
+      "id": 2,
+      "category": 0,
+      "name": "Острые"
+    },
+    {
+      "id": 3,
+      "category": 0,
+      "name": "Гриль"
+    }
+  ],
+  "products": [
+    {
+      "id": 0,
+      "category": 0,
+      "tag": 0,
+      "priority": 0,
+      "title": "Цыпленок Пармеджано",
+      "price": 360,
+      "image": "/products/pizza-parmejano.webp",
+      "options": [
+        {
+          "name": "type",
+          "items": [
+            {
+              "label": "тонкое",
+              "price": 25
+            },
+            {
+              "label": "традиционное",
+              "price": 50
+            }
+          ]
+        },
+        {
+          "name": "size",
+          "items": [
+            {
+              "label": "26 см.",
+              "price": 25
+            },
+            {
+              "label": "30 см.",
+              "price": 100
+            },
+            {
+              "label": "40 см.",
+              "price": 155
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "category": 0,
+      "tag": 1,
+      "priority": 0,
+      "title": "Нежный грибочек",
+      "price": 325,
+      "image": "/products/pizza-gribochek.webp",
+      "options": [
+        {
+          "name": "type",
+          "items": [
+            {
+              "label": "тонкое",
+              "price": 800
+            },
+            {
+              "label": "традиционное",
+              "price": 50
+            }
+          ]
+        },
+        {
+          "name": "size",
+          "activeItem": "26 см.",
+          "items": [
+            {
+              "label": "26 см.",
+              "price": 25
+            },
+            {
+              "label": "30 см.",
+              "price": 100
+            },
+            {
+              "label": "40 см.",
+              "price": 155
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "category": 0,
+      "tag": 3,
+      "priority": 3,
+      "title": "Карбонара",
+      "price": 350,
+      "image": "/products/pizza-carbonara.webp",
+      "options": [
+        {
+          "name": "type",
+          "activeItem": "тонкое",
+          "items": [
+            {
+              "label": "тонкое",
+              "price": 25
+            },
+            {
+              "label": "традиционное",
+              "price": 50
+            }
+          ]
+        },
+        {
+          "name": "size",
+          "activeItem": "26 см.",
+          "items": [
+            {
+              "label": "26 см.",
+              "price": 25
+            },
+            {
+              "label": "30 см.",
+              "price": 100
+            },
+            {
+              "label": "40 см.",
+              "price": 155
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "category": 0,
+      "tag": 0,
+      "priority": 0,
+      "title": "Двойной цыпленок",
+      "price": 350,
+      "image": "/products/pizza-ciplenok.webp",
+      "options": [
+        {
+          "name": "type",
+          "activeItem": "тонкое",
+          "items": [
+            {
+              "label": "тонкое",
+              "price": 25
+            },
+            {
+              "label": "традиционное",
+              "price": 50
+            }
+          ]
+        },
+        {
+          "name": "size",
+          "activeItem": "26 см.",
+          "items": [
+            {
+              "label": "26 см.",
+              "price": 25
+            },
+            {
+              "label": "30 см.",
+              "price": 100
+            },
+            {
+              "label": "40 см.",
+              "price": 155
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "category": 0,
+      "tag": 0,
+      "priority": 3,
+      "title": "Ветчина и сыр",
+      "price": 320,
+      "image": "/products/pizza-vetchinacir.webp",
+      "options": [
+        {
+          "name": "type",
+          "activeItem": "тонкое",
+          "items": [
+            {
+              "label": "тонкое",
+              "price": 25
+            },
+            {
+              "label": "традиционное",
+              "price": 50
+            }
+          ]
+        },
+        {
+          "name": "size",
+          "activeItem": "26 см.",
+          "items": [
+            {
+              "label": "26 см.",
+              "price": 25
+            },
+            {
+              "label": "30 см.",
+              "price": 100
+            },
+            {
+              "label": "40 см.",
+              "price": 155
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "category": 0,
+      "tag": 0,
+      "priority": 2,
+      "title": "4 сезона",
+      "price": 410,
+      "image": "/products/pizza-4sezon.webp",
+      "options": [
+        {
+          "name": "type",
+          "activeItem": "тонкое",
+          "items": [
+            {
+              "label": "тонкое",
+              "price": 25
+            },
+            {
+              "label": "традиционное",
+              "price": 50
+            }
+          ]
+        },
+        {
+          "name": "size",
+          "activeItem": "26 см.",
+          "items": [
+            {
+              "label": "26 см.",
+              "price": 25
+            },
+            {
+              "label": "30 см.",
+              "price": 100
+            },
+            {
+              "label": "40 см.",
+              "price": 155
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "category": 0,
+      "tag": 3,
+      "priority": 2,
+      "title": "Маргарита",
+      "price": 315,
+      "image": "/products/pizza-margarita.webp",
+      "options": [
+        {
+          "name": "type",
+          "activeItem": "тонкое",
+          "items": [
+            {
+              "label": "тонкое",
+              "price": 25
+            },
+            {
+              "label": "традиционное",
+              "price": 50
+            }
+          ]
+        },
+        {
+          "name": "size",
+          "activeItem": "26 см.",
+          "items": [
+            {
+              "label": "26 см.",
+              "price": 25
+            },
+            {
+              "label": "30 см.",
+              "price": 100
+            },
+            {
+              "label": "40 см.",
+              "price": 155
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "category": 0,
+      "tag": 0,
+      "priority": 0,
+      "title": "Мясная",
+      "price": 345,
+      "image": "/products/pizza-myasnaya.webp",
+      "options": [
+        {
+          "name": "type",
+          "activeItem": "тонкое",
+          "items": [
+            {
+              "label": "тонкое",
+              "price": 25
+            },
+            {
+              "label": "традиционное",
+              "price": 50
+            }
+          ]
+        },
+        {
+          "name": "size",
+          "activeItem": "26 см.",
+          "items": [
+            {
+              "label": "26 см.",
+              "price": 25
+            },
+            {
+              "label": "30 см.",
+              "price": 100
+            },
+            {
+              "label": "40 см.",
+              "price": 155
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "category": 0,
+      "tag": 2,
+      "priority": 1,
+      "title": "Мексиканская",
+      "price": 380,
+      "image": "/products/pizza-meksika.webp",
+      "options": [
+        {
+          "name": "type",
+          "activeItem": "тонкое",
+          "items": [
+            {
+              "label": "тонкое",
+              "price": 25
+            },
+            {
+              "label": "традиционное",
+              "price": 50
+            }
+          ]
+        },
+        {
+          "name": "size",
+          "activeItem": "26 см.",
+          "items": [
+            {
+              "label": "26 см.",
+              "price": 25
+            },
+            {
+              "label": "30 см.",
+              "price": 100
+            },
+            {
+              "label": "40 см.",
+              "price": 155
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

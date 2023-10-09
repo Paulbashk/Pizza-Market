@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slider (Swiper) check prop: call onBeforeInit 1`] = `
+<div>
+  <div
+    data-testid="Swiper-testId"
+  >
+    <div
+      data-testid="SwiperSlide-testId"
+    >
+      1
+    </div>
+    <div
+      data-testid="SwiperSlide-testId"
+    >
+      2
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Slider (Swiper) should render with 5 slides 1`] = `
+<div>
+  <div
+    data-testid="Swiper-testId"
+  >
+    <div
+      data-testid="SwiperSlide-testId"
+    >
+      1
+    </div>
+    <div
+      data-testid="SwiperSlide-testId"
+    >
+      2
+    </div>
+    <div
+      data-testid="SwiperSlide-testId"
+    >
+      3
+    </div>
+    <div
+      data-testid="SwiperSlide-testId"
+    >
+      4
+    </div>
+    <div
+      data-testid="SwiperSlide-testId"
+    >
+      5
+    </div>
+  </div>
+</div>
+`;

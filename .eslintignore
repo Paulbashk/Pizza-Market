@@ -1,0 +1,6 @@
+.next
+public
+node_modules
+package-lock.json
+jest.config.mjs
+**/*.test.js

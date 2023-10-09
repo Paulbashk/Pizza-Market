@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UI Layout should render 1`] = `
+<div>
+  <title>
+    title page
+  </title>
+  <main>
+    Content
+  </main>
+</div>
+`;

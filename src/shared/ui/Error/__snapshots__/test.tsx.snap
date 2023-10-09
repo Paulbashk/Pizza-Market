@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UI Error should render 1`] = `
+.c0 {
+  color: red;
+  font-weight: 600;
+}
+
+<div>
+  <p
+    class="c0"
+  >
+    Error page
+  </p>
+</div>
+`;
+
+exports[`UI Error should render with props example className 1`] = `
+.c0 {
+  color: red;
+  font-weight: 600;
+}
+
+<div>
+  <p
+    class="c0 error-test"
+  >
+    Error page
+  </p>
+</div>
+`;

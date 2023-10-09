@@ -1,0 +1,369 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UI Button should render gray hovered active 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  -webkit-transition-property: color,background-color;
+  transition-property: color,background-color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  color: #292729;
+  background-color: #f6f6f6;
+  border-radius: 32px;
+  padding: 10px 16px;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+  opacity: 1;
+  background-color: #292729;
+  color: #fff;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.c0:hover {
+  cursor: pointer;
+}
+
+.c0:active {
+  outline: none;
+  border: unset;
+}
+
+.c0:hover {
+  opacity: 0.8;
+}
+
+.c0:hover {
+  background-color: #292729;
+  color: #fff;
+}
+
+<div>
+  <button
+    class="c0"
+    role="button"
+    type="submit"
+  >
+    Привет мир
+  </button>
+</div>
+`;
+
+exports[`UI Button should render gray hovered inactive 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  -webkit-transition-property: color,background-color;
+  transition-property: color,background-color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  color: #292729;
+  background-color: #f6f6f6;
+  border-radius: 32px;
+  padding: 10px 16px;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+  opacity: 1;
+}
+
+.c0:hover {
+  cursor: pointer;
+}
+
+.c0:active {
+  outline: none;
+  border: unset;
+}
+
+.c0:hover {
+  background-color: #292729;
+  color: #fff;
+}
+
+<div>
+  <button
+    class="c0"
+    role="button"
+    type="submit"
+  >
+    Привет мир
+  </button>
+</div>
+`;
+
+exports[`UI Button should render transparent hovered active 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  -webkit-transition-property: color,background-color;
+  transition-property: color,background-color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  border-color: #f9b31f;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 16px;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  -webkit-letter-spacing: 0.015em;
+  -moz-letter-spacing: 0.015em;
+  -ms-letter-spacing: 0.015em;
+  letter-spacing: 0.015em;
+  color: #f9b31f;
+  background-color: transparent;
+  padding: 8px 12px;
+}
+
+.c0:hover {
+  cursor: pointer;
+}
+
+.c0:active {
+  outline: none;
+  border: unset;
+}
+
+.c0:hover {
+  background-color: #f9b31f;
+  color: #fff;
+}
+
+<div>
+  <button
+    class="c0"
+    role="button"
+    type="submit"
+  >
+    Привет мир
+  </button>
+</div>
+`;
+
+exports[`UI Button should render transparent hovered inactive 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  -webkit-transition-property: color,background-color;
+  transition-property: color,background-color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  border-color: #f9b31f;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 16px;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  -webkit-letter-spacing: 0.015em;
+  -moz-letter-spacing: 0.015em;
+  -ms-letter-spacing: 0.015em;
+  letter-spacing: 0.015em;
+  color: #f9b31f;
+  background-color: transparent;
+  padding: 8px 12px;
+}
+
+.c0:hover {
+  cursor: pointer;
+}
+
+.c0:active {
+  outline: none;
+  border: unset;
+}
+
+.c0:hover {
+  background-color: #f9b31f;
+  color: #fff;
+}
+
+<div>
+  <button
+    class="c0"
+    role="button"
+    type="submit"
+  >
+    Привет мир
+  </button>
+</div>
+`;
+
+exports[`UI Button should render with content 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  -webkit-transition-property: color,background-color;
+  transition-property: color,background-color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  color: #292729;
+  background-color: #f6f6f6;
+  border-radius: 32px;
+  padding: 10px 16px;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+  opacity: 1;
+}
+
+.c0:hover {
+  cursor: pointer;
+}
+
+.c0:active {
+  outline: none;
+  border: unset;
+}
+
+.c0:hover {
+  background-color: #292729;
+  color: #fff;
+}
+
+<div>
+  <button
+    class="c0"
+    role="button"
+    type="submit"
+  >
+    Привет мир
+  </button>
+</div>
+`;
+
+exports[`UI Button should render with props example className 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  -webkit-transition-property: color,background-color;
+  transition-property: color,background-color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  border-color: #f9b31f;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 16px;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  -webkit-letter-spacing: 0.015em;
+  -moz-letter-spacing: 0.015em;
+  -ms-letter-spacing: 0.015em;
+  letter-spacing: 0.015em;
+  color: #f9b31f;
+  background-color: transparent;
+  padding: 8px 12px;
+}
+
+.c0:hover {
+  cursor: pointer;
+}
+
+.c0:active {
+  outline: none;
+  border: unset;
+}
+
+.c0:hover {
+  background-color: #f9b31f;
+  color: #fff;
+}
+
+<div>
+  <button
+    class="c0 test-class"
+    role="button"
+    type="submit"
+  >
+    Привет мир
+  </button>
+</div>
+`;
