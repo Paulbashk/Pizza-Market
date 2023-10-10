@@ -1,11 +1,11 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 
 class ApiClient {
-  private api: AxiosInstance;
+  private instance: AxiosInstance;
 
   public constructor() {
-    this.api = axios.create({
-      baseURL: process.env.API_URL,
+    this.instance = axios.create({
+      baseURL: process.env.NEXT_PUBLIC_API_URL,
     });
   }
 
@@ -14,14 +14,14 @@ class ApiClient {
     data?: B,
     config?: AxiosRequestConfig,
   ): Promise<R> {
-    return this.api.post(url, data, config);
+    return this.instance.post(url, data, config);
   }
 
   public get<T, R = AxiosResponse<T>>(
     url: string,
     config?: AxiosRequestConfig,
   ): Promise<R> {
-    return this.api.get(url, config);
+    return this.instance.get(url, config);
   }
 
   public put<T, B, R = AxiosResponse<T>>(
@@ -29,14 +29,14 @@ class ApiClient {
     data?: B,
     config?: AxiosRequestConfig,
   ): Promise<R> {
-    return this.api.put(url, data, config);
+    return this.instance.put(url, data, config);
   }
 
   public delete<T, R = AxiosResponse<T>>(
     url: string,
     config?: AxiosRequestConfig,
   ): Promise<R> {
-    return this.api.delete(url, config);
+    return this.instance.delete(url, config);
   }
 
   public patch<T, B, R = AxiosResponse<T>>(
@@ -44,7 +44,7 @@ class ApiClient {
     data?: B,
     config?: AxiosRequestConfig,
   ): Promise<R> {
-    return this.api.patch(url, data, config);
+    return this.instance.patch(url, data, config);
   }
 }
 

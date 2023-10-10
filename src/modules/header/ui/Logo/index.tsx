@@ -8,7 +8,7 @@ interface LogoProps {
 
 const Logo = ({ logoImg }: LogoProps) => (
   <S.LogoLink href="/">
-    <S.LogoImage src={logoImg} alt="Logotype" priority={false} />
+    <S.LogoImage src={logoImg} alt="Logotype" />
     <S.LogoWrapper>
       <S.LogoName>SUPER PIZZA</S.LogoName>
       <S.LogoDesc>очень вкусная пицца</S.LogoDesc>
