@@ -2,25 +2,13 @@
 
 exports[`UI Button should render gray hovered active 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   outline: none;
   border: none;
-  -webkit-transition-property: color,background-color;
   transition-property: color,background-color;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
   color: #292729;
   background-color: #f6f6f6;
@@ -32,7 +20,6 @@ exports[`UI Button should render gray hovered active 1`] = `
   opacity: 1;
   background-color: #292729;
   color: #fff;
-  -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 
@@ -67,25 +54,13 @@ exports[`UI Button should render gray hovered active 1`] = `
 
 exports[`UI Button should render gray hovered inactive 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   outline: none;
   border: none;
-  -webkit-transition-property: color,background-color;
   transition-property: color,background-color;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
   color: #292729;
   background-color: #f6f6f6;
@@ -124,25 +99,13 @@ exports[`UI Button should render gray hovered inactive 1`] = `
 
 exports[`UI Button should render transparent hovered active 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   outline: none;
   border: none;
-  -webkit-transition-property: color,background-color;
   transition-property: color,background-color;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
   border-color: #f9b31f;
   border-style: solid;
@@ -151,9 +114,6 @@ exports[`UI Button should render transparent hovered active 1`] = `
   font-size: 15px;
   line-height: 18px;
   font-weight: 700;
-  -webkit-letter-spacing: 0.015em;
-  -moz-letter-spacing: 0.015em;
-  -ms-letter-spacing: 0.015em;
   letter-spacing: 0.015em;
   color: #f9b31f;
   background-color: transparent;
@@ -167,6 +127,12 @@ exports[`UI Button should render transparent hovered active 1`] = `
 .c0:active {
   outline: none;
   border: unset;
+}
+
+.c0:active {
+  border-color: #f9b31f;
+  border-style: solid;
+  border-width: 2px;
 }
 
 .c0:hover {
@@ -187,25 +153,13 @@ exports[`UI Button should render transparent hovered active 1`] = `
 
 exports[`UI Button should render transparent hovered inactive 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   outline: none;
   border: none;
-  -webkit-transition-property: color,background-color;
   transition-property: color,background-color;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
   border-color: #f9b31f;
   border-style: solid;
@@ -214,9 +168,6 @@ exports[`UI Button should render transparent hovered inactive 1`] = `
   font-size: 15px;
   line-height: 18px;
   font-weight: 700;
-  -webkit-letter-spacing: 0.015em;
-  -moz-letter-spacing: 0.015em;
-  -ms-letter-spacing: 0.015em;
   letter-spacing: 0.015em;
   color: #f9b31f;
   background-color: transparent;
@@ -230,6 +181,12 @@ exports[`UI Button should render transparent hovered inactive 1`] = `
 .c0:active {
   outline: none;
   border: unset;
+}
+
+.c0:active {
+  border-color: #f9b31f;
+  border-style: solid;
+  border-width: 2px;
 }
 
 .c0:hover {
@@ -250,25 +207,13 @@ exports[`UI Button should render transparent hovered inactive 1`] = `
 
 exports[`UI Button should render with content 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   outline: none;
   border: none;
-  -webkit-transition-property: color,background-color;
   transition-property: color,background-color;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
   color: #292729;
   background-color: #f6f6f6;
@@ -307,25 +252,13 @@ exports[`UI Button should render with content 1`] = `
 
 exports[`UI Button should render with props example className 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   outline: none;
   border: none;
-  -webkit-transition-property: color,background-color;
   transition-property: color,background-color;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
   border-color: #f9b31f;
   border-style: solid;
@@ -334,9 +267,6 @@ exports[`UI Button should render with props example className 1`] = `
   font-size: 15px;
   line-height: 18px;
   font-weight: 700;
-  -webkit-letter-spacing: 0.015em;
-  -moz-letter-spacing: 0.015em;
-  -ms-letter-spacing: 0.015em;
   letter-spacing: 0.015em;
   color: #f9b31f;
   background-color: transparent;
@@ -350,6 +280,12 @@ exports[`UI Button should render with props example className 1`] = `
 .c0:active {
   outline: none;
   border: unset;
+}
+
+.c0:active {
+  border-color: #f9b31f;
+  border-style: solid;
+  border-width: 2px;
 }
 
 .c0:hover {

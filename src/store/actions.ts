@@ -1,18 +1,10 @@
-import {
-  actionsBanners,
-  fetchBanners,
-} from '@/entities/banners/services/banners';
-import { actionsFilter } from '@/entities/products/services/filter';
-import {
-  actionsProducts,
-  fetchProducts,
-} from '@/entities/products/services/products';
-import { actionsTags, fetchTags } from '@/entities/products/services/tags';
+import { productsFilterSlice } from '@/features/filter-products';
+import { productSlice, productAsyncActions } from '@/entities/product';
+import { tagSlice, tagAsyncActions } from '@/entities/tag';
 
 export const asyncActions = {
-  fetchBanners,
-  fetchProducts,
-  fetchTags,
+  ...productAsyncActions,
+  ...tagAsyncActions,
 };
 
 export type AsyncActionNames = keyof typeof asyncActions;
@@ -21,8 +13,7 @@ export type AsyncActionArgs = Parameters<
 >[0];
 
 export default {
-  ...actionsProducts,
-  ...actionsTags,
-  ...actionsBanners,
-  ...actionsFilter,
+  ...productsFilterSlice,
+  ...productSlice,
+  ...tagSlice,
 } as const;

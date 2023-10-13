@@ -1,3 +1,1 @@
-import SectionProducts from './ui';
-
-export default SectionProducts;
+export { SectionProducts } from './ui';

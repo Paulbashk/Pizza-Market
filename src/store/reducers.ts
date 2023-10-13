@@ -1,14 +1,12 @@
-import { reducerBanners } from '@/entities/banners/services/banners';
-import { reducerFilter } from '@/entities/products/services/filter';
-import { reducerProducts } from '@/entities/products/services/products';
-import { reducerTags } from '@/entities/products/services/tags';
 import { combineReducers } from '@reduxjs/toolkit';
+import { productsFilterSlice } from '@/features/filter-products';
+import { productSlice } from '@/entities/product';
+import { tagSlice } from '@/entities/tag';
 
 const rootReducer = combineReducers({
-  products: reducerProducts,
-  tags: reducerTags,
-  banners: reducerBanners,
-  filter: reducerFilter,
+  products: productSlice.reducer,
+  tags: tagSlice.reducer,
+  filter: productsFilterSlice.reducer,
 });
 
 export default rootReducer;

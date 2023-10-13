@@ -1,15 +1,22 @@
 import React from 'react';
 
+// types
+import type { IBanner } from '@/shared/types/interfaces';
+
 // components
-import Banners from '@/entities/banners';
+import { BannerSlider } from '@/modules/banners/ui';
 
 // assets
 import * as S from './styled';
 
-function SectionBanners() {
+interface SectionBannersProps {
+  banners: IBanner[];
+}
+
+function SectionBanners({ banners }: SectionBannersProps) {
   return (
     <S.SectionBanner name="promo">
-      <Banners />
+      <BannerSlider banners={banners} />
     </S.SectionBanner>
   );
 }

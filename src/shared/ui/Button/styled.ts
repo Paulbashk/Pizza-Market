@@ -72,6 +72,12 @@ export const Button = styled.button<ButtonStyles>`
           background-color: transparent;
           padding: 8px 12px;
 
+          &:active {
+            border-color: ${props.theme.colors.yellow};
+            border-style: solid;
+            border-width: 2px;
+          }
+
           &:hover {
             background-color: ${props.theme.colors.yellow};
             color: ${props.theme.colors.white};

@@ -1,4 +1,9 @@
 {
+  "logo": {
+    "src": "/logo.png",
+    "name": "SUPER PIZZA",
+    "subdesc": "очень вкусная пицца"
+  },
   "banners": [
     {
       "id": 0,
@@ -22,12 +27,12 @@
     {
       "id": 1,
       "name": "Напитки",
-      "slug": "drink"
+      "slug": "/drink"
     },
     {
       "id": 2,
       "name": "Закуски",
-      "slug": "snacks"
+      "slug": "/snacks"
     }
   ],
   "tags": [

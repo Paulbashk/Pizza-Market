@@ -1,3 +1,1 @@
-import SectionBanners from './ui';
-
-export default SectionBanners;
+export { SectionBanners } from './ui';

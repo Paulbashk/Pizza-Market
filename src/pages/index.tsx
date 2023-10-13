@@ -1,5 +1,9 @@
-import MainPage from '@/screens/main';
+import Category, { type CategoryProps } from '@/screens/category/ui';
 
-export default function Home() {
-  return <MainPage />;
+export { getStaticProps } from '@/screens/category/ui/Category';
+
+interface IndexPageProps extends CategoryProps {}
+
+export default function IndexPage(props: IndexPageProps) {
+  return <Category {...props} />;
 }

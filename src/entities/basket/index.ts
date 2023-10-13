@@ -1,3 +1,1 @@
-import BasketPrice from './ui';
-
-export default BasketPrice;
+export * as basketUI from './ui';

@@ -1,19 +1,27 @@
 import React from 'react';
-import { StaticImageData } from 'next/image';
+
+// interfaces
+import type { ILogo } from '@/shared/types/interfaces';
+
+// assets
 import * as S from './styled';
 
 interface LogoProps {
-  logoImg: StaticImageData;
+  logo: ILogo;
 }
 
-const Logo = ({ logoImg }: LogoProps) => (
-  <S.LogoLink href="/">
-    <S.LogoImage src={logoImg} alt="Logotype" />
-    <S.LogoWrapper>
-      <S.LogoName>SUPER PIZZA</S.LogoName>
-      <S.LogoDesc>очень вкусная пицца</S.LogoDesc>
-    </S.LogoWrapper>
-  </S.LogoLink>
-);
+const Logo = ({ logo }: LogoProps) => {
+  const { src, name, subdesc } = logo;
+
+  return (
+    <S.LogoLink href="/">
+      <S.LogoImage src={src} alt="Logotype" width={70} height={70} />
+      <S.LogoWrapper>
+        <S.LogoName>{name}</S.LogoName>
+        <S.LogoDesc>{subdesc}</S.LogoDesc>
+      </S.LogoWrapper>
+    </S.LogoLink>
+  );
+};
 
 export default Logo;

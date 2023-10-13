@@ -1,3 +1,1 @@
-import BasketPrice from './basket-price';
-
-export default BasketPrice;
+export { default as BasketPrice } from './BasketPrice';

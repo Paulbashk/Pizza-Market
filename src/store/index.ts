@@ -1,5 +1,5 @@
 // store
-import {
+export {
   type AppState,
   type AppStore,
   type AppDispatch,
@@ -8,7 +8,3 @@ import {
 } from './store';
 
 export { default as rootReducer } from './reducers';
-
-export type { AppState, AppStore, AppDispatch, AppThunk };
-
-export default wrapper;

@@ -1,20 +1,32 @@
 import React from 'react';
 
 // components
-import { Sorted, Tags, ProductsTitle, Products } from '@/entities/products';
+import { productsFilterUI } from '@/features/filter-products';
+import { Products, ProductsTitle, TagsProducts } from '@/modules/products/ui';
+
+// types
+import { ICategory } from '@/shared/types/interfaces';
 
 // assets
 import * as S from './styled';
 
-function SectionProducts() {
+interface SectionProductsProps {
+  category: ICategory;
+}
+
+const { SortedFilter } = productsFilterUI;
+
+function SectionProducts({ category }: SectionProductsProps) {
+  const { id, name } = category;
+
   return (
     <S.SectionProducts name="products">
       <S.ProductsHeader>
-        <Tags />
-        <Sorted />
+        <TagsProducts categoryId={id} />
+        <SortedFilter />
       </S.ProductsHeader>
-      <ProductsTitle />
-      <Products />
+      <ProductsTitle categoryName={name} />
+      <Products categoryId={id} />
     </S.SectionProducts>
   );
 }

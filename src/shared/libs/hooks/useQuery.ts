@@ -9,7 +9,7 @@ import useAppDispatch from './useAppDispatch';
 
 export interface ParamUseQuery {
   actionName: AsyncActionNames;
-  arg: AsyncActionArgs;
+  arg?: AsyncActionArgs;
   deps?: DependencyList;
 }
 

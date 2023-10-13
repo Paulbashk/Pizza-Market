@@ -12,12 +12,19 @@ const withQueryResolver =
     fetching: ParamUseQuerySelector<ReturnType>,
   ) =>
   <LoaderProps extends {}>(
-    LoaderComponent: React.ComponentType<LoaderProps> | React.ReactElement,
+    LoaderComponent:
+      | React.ComponentType<LoaderProps>
+      | React.ReactElement
+      | null,
   ) => {
     const Component = (props: ListProps | LoaderProps) => {
       const { isLoading, isError, error } = useQuerySelector({ ...fetching });
 
       if (isLoading) {
+        if (LoaderComponent === null) {
+          return null;
+        }
+
         if (typeof LoaderComponent === 'function') {
           return <LoaderComponent {...(props as LoaderProps)} />;
         }

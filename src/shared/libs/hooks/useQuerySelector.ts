@@ -8,7 +8,7 @@ export interface ParamUseQuerySelector<ReturnState> extends ParamUseQuery {
 
 const useQuerySelector = <ReturnState>({
   actionName,
-  arg,
+  arg = {},
   selector,
   deps,
 }: ParamUseQuerySelector<ReturnState>) => {
