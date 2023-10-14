@@ -1,12 +1,12 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import { productsFilterSlice } from '@/features/filter-products';
-import { productSlice } from '@/entities/product';
-import { tagSlice } from '@/entities/tag';
+import { productFilterModel } from '@/features/product/byFiltered';
+import { productModel } from '@/entities/product';
+import { tagModel } from '@/entities/tag';
 
 const rootReducer = combineReducers({
-  products: productSlice.reducer,
-  tags: tagSlice.reducer,
-  filter: productsFilterSlice.reducer,
+  products: productModel.reducer,
+  tags: tagModel.reducer,
+  filter: productFilterModel.reducer,
 });
 
 export default rootReducer;

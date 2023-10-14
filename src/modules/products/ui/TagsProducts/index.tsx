@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
 // services
-import { tagSelect } from '@/entities/tag';
+import { tagModel } from '@/entities/tag';
 
 // components
-import { productsFilterUI } from '@/features/filter-products';
-import { Loader, withQueryResolver } from '@/shared/ui';
+import { productFilterUI } from '@/features/product/byFiltered';
+import { Loader, Error } from '@/shared/ui';
+
+// hooks
+import { useAppDispatch } from '@/shared/libs/hooks';
 
 // assets
 import * as S from './styled';
@@ -14,18 +18,29 @@ interface TagsProps {
   categoryId: number;
 }
 
-const { TagsFiltered } = productsFilterUI;
+const { TagsFiltered } = productFilterUI;
 
 function Tags({ categoryId }: TagsProps) {
-  const WithQueryTags = withQueryResolver(TagsFiltered, {
-    actionName: 'fetchTags',
-    arg: { category: categoryId },
-    selector: tagSelect.queryState,
-  })(<Loader margin={-2} />);
+  const { isLoading, isError, error } = useSelector(
+    tagModel.selects.queryState,
+  );
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(tagModel.asyncActions.getTagsThunk({ category: categoryId }));
+  }, []);
+
+  if (isLoading) {
+    return <Loader margin={-2} />;
+  }
+
+  if (isError) {
+    return <Error>{error}</Error>;
+  }
 
   return (
     <S.Categories>
-      <WithQueryTags />
+      <TagsFiltered />
     </S.Categories>
   );
 }

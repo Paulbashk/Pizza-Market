@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import { EntityId } from '@reduxjs/toolkit';
 
 // services
-import { type Tag as typeTag } from '@/entities/tag/services';
+import { type Tag as typeTag } from '@/entities/tag/model/types';
 
 // components
 import { Tag } from '@/entities/tag/ui';

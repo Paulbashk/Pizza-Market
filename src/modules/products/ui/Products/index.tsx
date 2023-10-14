@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
 // services
-import { productSelect } from '@/entities/product';
+import { productModel } from '@/entities/product';
 
 // components
-import { Loader, withQueryResolver } from '@/shared/ui';
-import { productsFilterUI } from '@/features/filter-products';
+import { Loader, Error } from '@/shared/ui';
+import { productFilterUI } from '@/features/product/byFiltered';
+
+// hooks
+import { useAppDispatch } from '@/shared/libs/hooks';
 
 // assets
 import * as S from './styled';
@@ -14,20 +18,33 @@ interface ProductsProps {
   categoryId: number;
 }
 
-const { ProductsFiltered } = productsFilterUI;
+const { ProductsFiltered } = productFilterUI;
 
 const Products = ({ categoryId }: ProductsProps) => {
-  const WithQueryProducts = withQueryResolver(ProductsFiltered, {
-    actionName: 'fetchProducts',
-    arg: { category: categoryId },
-    selector: productSelect.queryState,
-  })(
-    <S.WrapperLoader>
-      <Loader />
-    </S.WrapperLoader>,
+  const { isLoading, isError, error } = useSelector(
+    productModel.selects.queryState,
   );
+  const dispatch = useAppDispatch();
 
-  return <WithQueryProducts />;
+  useEffect(() => {
+    dispatch(
+      productModel.asyncActions.getProductsThunk({ category: categoryId }),
+    );
+  }, []);
+
+  if (isLoading) {
+    return (
+      <S.WrapperLoader>
+        <Loader />
+      </S.WrapperLoader>
+    );
+  }
+
+  if (isError) {
+    return <Error>{error}</Error>;
+  }
+
+  return <ProductsFiltered />;
 };
 
 export default Products;

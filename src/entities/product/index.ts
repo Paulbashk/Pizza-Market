@@ -1,11 +1,8 @@
 // Public exports
-export * as productUI from './ui';
+export { ProductList } from './ui';
 
-export {
-  productAsyncActions,
-  productSelect,
-  productSlice,
-  type Product,
-} from './services';
+export * as productLibs from './libs';
 
-export * as productUtils from './utils';
+export * as productModel from './model';
+
+export type { Product as ProductTypes } from './model/types';

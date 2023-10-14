@@ -3,10 +3,10 @@ import { EntityId } from '@reduxjs/toolkit';
 import { useSelector } from 'react-redux';
 
 // services
-import { productSelect } from '@/entities/product/services';
+import { getByIdOnlyOptions } from '@/entities/product/model/selectors';
 
 // utils
-import { getActiveOptionId } from '@/entities/product/utils';
+import { getActiveOptionId } from '@/entities/product/libs';
 
 // assets
 import * as S from './styled';
@@ -17,9 +17,7 @@ interface ProductVariablesProps {
 }
 
 function ProductVariables({ handleSelect, id }: ProductVariablesProps) {
-  const { options, isOptions } = useSelector(
-    productSelect.getByIdOnlyOptions(id),
-  );
+  const { options, isOptions } = useSelector(getByIdOnlyOptions(id));
 
   if (!isOptions) {
     return null;

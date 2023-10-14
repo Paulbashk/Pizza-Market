@@ -3,17 +3,17 @@ import { useSelector } from 'react-redux';
 import { EntityId } from '@reduxjs/toolkit';
 
 // services
-import {
-  productSelect,
-  Product as typeProduct,
-} from '@/entities/product/services';
+import { getById } from '@/entities/product/model/selectors';
 
 // utils
-import { calcSumOptions } from '@/entities/product/utils';
+import { calcSumOptions } from '@/entities/product/libs';
 
 // components
 import { ButtonColors } from '@/shared/ui';
 import { ProductVariables } from '@/entities/product/ui';
+
+// types
+import { type Product as typeProduct } from '@/entities/product/model/types';
 
 // assets
 import * as S from './styled';
@@ -31,7 +31,7 @@ interface ProductState {
 
 function Product({ id }: ProductProps) {
   const { price, defaultPrice, image, title, isOptions, options } = useSelector(
-    productSelect.getById(id),
+    getById(id),
   );
 
   // Количество товаров, добавленных в корзину

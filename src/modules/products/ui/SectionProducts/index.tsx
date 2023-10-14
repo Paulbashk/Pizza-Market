@@ -1,7 +1,7 @@
 import React from 'react';
 
 // components
-import { productsFilterUI } from '@/features/filter-products';
+import { productFilterUI } from '@/features/product/byFiltered';
 import { Products, ProductsTitle, TagsProducts } from '@/modules/products/ui';
 
 // types
@@ -14,7 +14,7 @@ interface SectionProductsProps {
   category: ICategory;
 }
 
-const { SortedFilter } = productsFilterUI;
+const { SortedFilter } = productFilterUI;
 
 function SectionProducts({ category }: SectionProductsProps) {
   const { id, name } = category;

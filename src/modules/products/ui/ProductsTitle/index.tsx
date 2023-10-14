@@ -1,7 +1,7 @@
 import React from 'react';
 
 // components
-import { productsFilterUI } from '@/features/filter-products';
+import { productFilterUI } from '@/features/product/byFiltered';
 
 // assets
 import * as S from './styled';
@@ -10,7 +10,7 @@ interface ProductsTitleProps {
   categoryName: string;
 }
 
-const { ProductsFilteredTitle } = productsFilterUI;
+const { ProductsFilteredTitle } = productFilterUI;
 
 const ProductsTitle = ({ categoryName }: ProductsTitleProps) => (
   <S.ProductsTitle>

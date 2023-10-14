@@ -1,1 +1,5 @@
-export { default as Category, type CategoryProps } from './Category';
+export {
+  default as Category,
+  type CategoryProps,
+  getStaticProps,
+} from './Category';

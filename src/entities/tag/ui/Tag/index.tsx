@@ -2,7 +2,10 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 // services
-import { tagSelect, type Tag as typeTag } from '@/entities/tag/services';
+import { getById } from '@/entities/tag/model/selectors';
+
+// types
+import { type Tag as typeTag } from '@/entities/tag/model/types';
 
 // components
 import { Button, ButtonColors } from '@/shared/ui';
@@ -14,7 +17,7 @@ interface TagProps {
 }
 
 const Tag = ({ id, selected, onClick }: TagProps) => {
-  const tag = useSelector(tagSelect.getById(id));
+  const tag = useSelector(getById(id));
 
   return (
     <Button

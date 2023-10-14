@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 
 // redux store
 import { Provider } from 'react-redux';
-import { wrapper } from '@/store';
+import wrapper from '@/store';
 
 // styles
 import { GlobalStyle, theme } from '@/shared/libs/assets/styles';

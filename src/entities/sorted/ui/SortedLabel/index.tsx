@@ -1,4 +1,6 @@
 import React, { ComponentPropsWithoutRef } from 'react';
+
+// assets
 import * as S from './styled';
 
 interface SortedLabelProps extends ComponentPropsWithoutRef<'div'> {

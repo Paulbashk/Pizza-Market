@@ -31,7 +31,5 @@ export const VariableRadio = styled(RadioButton)<RadioButtonStyles>`
       ~ label {
         padding: 6px 12px;
       }
-    `}/* ~ label {
-    padding: 6px 12px;
-  } */
+    `}
 `;

@@ -11,4 +11,3 @@ export { default as Modal, ModalOverlay, ModalWindow } from './Modal';
 export { default as Error } from './Error';
 export { default as Section } from './Section';
 export { default as Layout } from './Layout';
-export { default as withQueryResolver } from './withQueryResolver';

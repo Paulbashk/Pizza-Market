@@ -1,10 +1,6 @@
 // Public exports
-export * as tagUI from './ui';
+export { TagList } from './ui';
 
-export {
-  tagSlice,
-  type Tag,
-  TagVariables,
-  tagAsyncActions,
-  tagSelect,
-} from './services';
+export * as tagModel from './model';
+
+export { type Tag as TagTypes, TagVariables } from './model/types';
