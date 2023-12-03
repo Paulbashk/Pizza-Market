@@ -19,6 +19,7 @@
     "react/jsx-curly-newline": "off",
     "react/jsx-wrap-multilines": "off",
     "react/jsx-props-no-spreading": "off",
+
     "react/react-in-jsx-scope": "off",
     "linebreak-style": "off",
     "import/no-cycle": "off",

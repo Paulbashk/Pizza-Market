@@ -1,8 +1,10 @@
+'use client';
+
 import { createGlobalStyle } from 'styled-components';
 import normalize from './normalize';
 import { theme } from './theme';
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   ${normalize}
 
   *,
@@ -27,12 +29,6 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
-  ul,
-  ol {
-    margin: 0;
-    padding: 0;
-  }
-
   img {
     display: block;
     width: 100%;
@@ -43,9 +39,8 @@ const GlobalStyle = createGlobalStyle`
   main {
     display: flex;
     flex-direction: column;
-    row-gap: 40px;
+    position: relative;
     padding: 60px 0;
+    row-gap: 40px;
   }
 `;
-
-export default GlobalStyle;

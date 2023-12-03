@@ -1,14 +1,14 @@
-import React, { ComponentPropsWithoutRef } from 'react';
+import { type ComponentPropsWithoutRef, type ReactNode } from 'react';
 
 // assets
 import * as S from './styled';
 
 interface SortedLabelProps extends ComponentPropsWithoutRef<'div'> {
-  label: string | React.ReactNode;
+  label: string | ReactNode;
   isActive?: boolean;
 }
 
-function SortedLabel(props: SortedLabelProps) {
+export function SortedLabel(props: SortedLabelProps) {
   const { label, isActive, ...otherProps } = props;
 
   return (
@@ -19,5 +19,3 @@ function SortedLabel(props: SortedLabelProps) {
     </S.Label>
   );
 }
-
-export default SortedLabel;

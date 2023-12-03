@@ -1,3 +1,5 @@
+'use client';
+
 import { type ChangeEvent, createContext } from 'react';
 
 export interface RadioGroupContextValue {
@@ -6,8 +8,6 @@ export interface RadioGroupContextValue {
   onChange: (event: ChangeEvent<HTMLInputElement>, value: string) => void;
 }
 
-const RadioGroupContext = createContext<RadioGroupContextValue | undefined>(
-  undefined,
-);
-
-export default RadioGroupContext;
+export const RadioGroupContext = createContext<
+  RadioGroupContextValue | undefined
+>(undefined);

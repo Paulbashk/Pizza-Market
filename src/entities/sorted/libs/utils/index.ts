@@ -1,0 +1,1 @@
+export { getDefaultSortByType } from './getDefaultSortByType';

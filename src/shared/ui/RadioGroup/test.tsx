@@ -1,10 +1,10 @@
-import RadioButton from '@/shared/ui/RadioButton';
+import { RadioButton } from '@/shared/ui/RadioButton';
 import { renderApp } from '@/test/utils';
 import { act, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import RadioGroup from './index';
-import RadioGroupContext from './context';
+import { RadioGroup } from '.';
+import { RadioGroupContext } from './context';
 
 describe('RadioGroup', () => {
   it('should render with radio, checking if the default value matches', () => {

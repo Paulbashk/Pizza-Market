@@ -1,1 +1,1 @@
-export { default as withRenderTheme } from './withRenderTheme';
+export { withRenderTheme } from './withRenderTheme';

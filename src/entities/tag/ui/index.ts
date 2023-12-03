@@ -1,2 +1,2 @@
-export { default as Tag } from './Tag';
-export { default as TagList } from './TagList';
+export { TagList } from './TagList';
+export { tagListWithQuery } from './tagListWithQuery';

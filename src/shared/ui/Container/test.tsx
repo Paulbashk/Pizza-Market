@@ -1,5 +1,5 @@
 import { renderApp } from '@/test/utils';
-import Container from './index';
+import { Container } from '.';
 
 describe('UI Container', () => {
   it('should render with content', () => {

@@ -1,9 +1,10 @@
-import React from 'react';
+'use client';
+
 import FadeLoader from 'react-spinners/FadeLoader';
 import { LoaderHeightWidthRadiusProps } from 'react-spinners/helpers/props';
 import { useTheme } from 'styled-components';
 
-const Loader = (props: LoaderHeightWidthRadiusProps) => {
+export const Loader = (props: LoaderHeightWidthRadiusProps) => {
   const theme = useTheme();
   const { children, color, width, height, ...otherProps } = props;
 
@@ -16,5 +17,3 @@ const Loader = (props: LoaderHeightWidthRadiusProps) => {
     />
   );
 };
-
-export default Loader;

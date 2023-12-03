@@ -1,20 +1,20 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import type { HandleReject } from '@/shared/libs/types';
-import { ProductAPI } from '@/entities/product/api';
-import type { Product } from './types';
+import {
+  ProductService,
+  type FetchGetAllRequest,
+  type FetchGetAllResponse,
+} from '@/entities/product/api';
 
 export const getProductsThunk = createAsyncThunk<
-  Product.FetchAllResponse,
-  Product.FetchAllRequest,
+  FetchGetAllResponse,
+  FetchGetAllRequest,
   HandleReject
 >('products/fetchAll', async (params, { rejectWithValue }) => {
   try {
-    const response = await ProductAPI.fetchAll<
-      Product.FetchAllResponse,
-      Product.FetchAllRequest
-    >(params);
+    const { data } = await ProductService.fetchGetAll(params);
 
-    return response.data;
+    return data;
   } catch (_) {
     return rejectWithValue('Произошла ошибка при загрузке товаров');
   }

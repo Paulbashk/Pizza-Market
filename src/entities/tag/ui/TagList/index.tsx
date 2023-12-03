@@ -1,39 +1,44 @@
-import React, { useCallback } from 'react';
-import { EntityId } from '@reduxjs/toolkit';
+'use client';
+
+import { memo, useMemo } from 'react';
+import { useSelector } from 'react-redux';
 
 // services
-import { type Tag as typeTag } from '@/entities/tag/model/types';
+import { selects } from '@/entities/tag/model/';
+
+// types
+import { type Tag } from '@/entities/tag/model/types';
 
 // components
-import { Tag } from '@/entities/tag/ui';
+import { TagButton } from '@/entities/tag/ui/TagButton';
+
+// assets
+import * as S from './styled';
 
 interface TagListProps {
-  isAll: boolean;
-  isAllActive: boolean;
-  activeId: typeTag.Variable;
-  list: EntityId[];
-  callbackSelectItem: (id: typeTag.Variable) => void;
+  selectId: Tag.Variable;
+  handleSelect: (id: Tag.Variable) => void;
 }
 
-const TagList = ({
-  isAll = true,
-  isAllActive = true,
-  activeId,
-  list,
-  callbackSelectItem,
-}: TagListProps) => {
-  const selectItem = useCallback((id: typeTag.Variable) => {
-    callbackSelectItem(id);
-  }, []);
+const TagButtonMemo = memo(TagButton);
 
-  return (
-    <>
-      {isAll && <Tag id="ALL" selected={isAllActive} onClick={selectItem} />}
-      {[...list].map(id => (
-        <Tag key={id} id={id} selected={activeId === id} onClick={selectItem} />
-      ))}
-    </>
+export const TagList = memo(({ selectId, handleSelect }: TagListProps) => {
+  const ids = useSelector(selects.getIdsWithAll);
+
+  const TagButtonsMemo = useMemo(
+    () =>
+      ids.map(id => (
+        <TagButtonMemo
+          key={id}
+          id={id}
+          isActive={selectId === id}
+          onClick={handleSelect}
+        />
+      )),
+    [selectId, handleSelect],
   );
-};
 
-export default TagList;
+  if (ids.length === 0) return null;
+
+  return <S.Wrapper>{TagButtonsMemo}</S.Wrapper>;
+});

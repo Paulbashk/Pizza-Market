@@ -1,5 +1,5 @@
-export { default as callIsDefined } from './callIsDefined';
-export { default as uniqueID } from './uniquelId';
+export { callIsDefined } from './callIsDefined';
+export { uniqueID } from './uniquelId';
 
-export { default as sortByOrder } from './sortByOrder';
-export { default as sortByOrderWithParam } from './sortByOrderWithParam';
+export { sortByOrder } from './sortByOrder';
+export { sortByOrderWithParam } from './sortByOrderWithParam';

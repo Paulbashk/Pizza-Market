@@ -1,5 +1,5 @@
 // Public exports
-export { TagList } from './ui';
+export * as tagUI from './ui';
 
 export * as tagModel from './model';
 

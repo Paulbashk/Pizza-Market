@@ -2,7 +2,7 @@
 import { renderApp } from '@/test/utils';
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import Modal, { ModalWindow } from './index';
+import { Modal, ModalWindow } from '.';
 
 describe('UI Modal', () => {
   it('should dont display anything, isOpen is false', () => {

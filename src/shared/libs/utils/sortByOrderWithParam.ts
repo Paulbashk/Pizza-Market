@@ -1,4 +1,4 @@
-const sortByOrderWithParam = <T extends Record<string, string | number>>(
+export const sortByOrderWithParam = <T extends Record<string, string | number>>(
   type: 'DESC' | 'ASC',
   itr: T[] | object,
   param: string,
@@ -24,5 +24,3 @@ const sortByOrderWithParam = <T extends Record<string, string | number>>(
       return 0;
     },
   );
-
-export default sortByOrderWithParam;

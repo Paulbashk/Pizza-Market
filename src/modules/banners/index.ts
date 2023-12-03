@@ -1,1 +1,1 @@
-export { SectionBanners } from './ui';
+export { BannerSection } from './ui';

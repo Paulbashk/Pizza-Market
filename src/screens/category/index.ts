@@ -1,1 +1,1 @@
-export { Category, type CategoryProps, getStaticProps } from './ui';
+export { CategoryScreen } from './ui';

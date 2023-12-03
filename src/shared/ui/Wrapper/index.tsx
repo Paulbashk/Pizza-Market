@@ -1,12 +1,10 @@
-import React, { ComponentPropsWithoutRef } from 'react';
+import { type ComponentPropsWithoutRef, type ReactNode } from 'react';
 import * as S from './styled';
 
 interface WrapperProps extends ComponentPropsWithoutRef<'div'> {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-const Wrapper = ({ children, ...otherProps }: WrapperProps) => (
+export const Wrapper = ({ children, ...otherProps }: WrapperProps) => (
   <S.Wrapper {...otherProps}>{children}</S.Wrapper>
 );
-
-export default Wrapper;

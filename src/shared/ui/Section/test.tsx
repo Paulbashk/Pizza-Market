@@ -1,7 +1,7 @@
 import { renderApp } from '@/test/utils';
 import React from 'react';
 import { screen } from '@testing-library/react';
-import Section from './index';
+import { Section } from '.';
 
 jest.mock('hex-rgb', () => () => '');
 

@@ -1,5 +1,5 @@
 import { createSelector } from '@reduxjs/toolkit';
-import { AppState } from '@/store';
+import { type AppState } from '@/app/_root/store';
 import type { QueryState } from '@/shared/libs/types';
 
 export const makeSelectHandleState = <ReturnState>(

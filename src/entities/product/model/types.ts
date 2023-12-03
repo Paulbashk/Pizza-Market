@@ -1,15 +1,8 @@
 import { EntityState } from '@reduxjs/toolkit';
-import type { QueryParams, QueryState } from '@/shared/libs/types';
+import type { QueryState } from '@/shared/libs/types';
 
 export namespace Product {
   export type State = QueryState;
-
-  export type FetchAllRequest = QueryParams<{
-    category?: number;
-    tag?: number;
-  }>;
-
-  export type FetchAllResponse = Item[];
 
   export type MakeSelectQuery = EntityState<Item>;
 

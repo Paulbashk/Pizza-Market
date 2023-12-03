@@ -1,14 +1,8 @@
 import { EntityId, EntityState } from '@reduxjs/toolkit';
-import type { QueryParams, QueryState } from '@/shared/libs/types';
+import type { QueryState } from '@/shared/libs/types';
 
 export namespace Tag {
   export type State = QueryState;
-
-  export type FetchAllRequest = QueryParams<{
-    category?: number;
-  }>;
-
-  export type FetchAllResponse = Item[];
 
   export interface Item {
     readonly id: number;

@@ -4,7 +4,6 @@ import { type Filter, SortEnumTypes } from './types';
 const initialState: Filter.State = {
   filtered: 'ALL',
   sort: SortEnumTypes.DESC_POPULAR,
-  category: 0,
 };
 
 const filterSlice = createSlice({
@@ -17,9 +16,7 @@ const filterSlice = createSlice({
     setFiltered: (state, action: PayloadAction<Filter.Filtered>) => {
       state.filtered = action.payload;
     },
-    setCategory: (state, action: PayloadAction<Filter.CategoryId>) => {
-      state.category = action.payload;
-    },
+    resetState: () => initialState,
   },
 });
 

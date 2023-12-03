@@ -1,6 +1,6 @@
 import { renderApp } from '@/test/utils';
 import { screen } from '@testing-library/react';
-import Error from './index';
+import { Error } from '.';
 
 describe('UI Error', () => {
   it('should render', () => {

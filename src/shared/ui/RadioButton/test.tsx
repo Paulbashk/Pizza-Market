@@ -3,7 +3,7 @@ import { screen } from '@testing-library/react';
 import { theme } from '@/shared/libs/assets/styles';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import RadioButton, { RadioColors } from './index';
+import { RadioButton, RadioColors } from './index';
 
 describe('RadioButton', () => {
   it('should render with value and label text', () => {

@@ -1,9 +1,8 @@
-import React from 'react';
-
 // components
 import { Container } from '@/shared/ui';
-import { Logo, CategoriesList } from '@/modules/header/ui';
-import { basketUI } from '@/entities/basket';
+import { Logo } from '@/entities/logo';
+import { CategoriesMenu } from '@/entities/categories-menu';
+import { HeaderBasket } from '@/modules/header/ui/HeaderBasket';
 
 // type
 import type { ICategory, ILogo } from '@/shared/types/interfaces';
@@ -17,18 +16,16 @@ interface HeaderProps {
   logo: ILogo;
 }
 
-const Header = ({ categoryId, categories, logo }: HeaderProps) => (
-  <header className="header">
+export const Header = ({ categoryId, categories, logo }: HeaderProps) => (
+  <S.Header>
     <Container>
       <S.WrapperHeader>
         <Logo logo={logo} />
         {categories.length > 0 && (
-          <CategoriesList categoryId={categoryId} categories={categories} />
+          <CategoriesMenu categoryId={categoryId} categories={categories} />
         )}
-        <basketUI.BasketPrice />
+        <HeaderBasket />
       </S.WrapperHeader>
     </Container>
-  </header>
+  </S.Header>
 );
-
-export default Header;

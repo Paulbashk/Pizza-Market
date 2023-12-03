@@ -1,4 +1,4 @@
-export { default as TagsFiltered } from './TagsFiltered';
-export { default as SortedFilter } from './SortedFilter';
-export { default as ProductsFilteredTitle } from './ProductsFilteredTitle';
-export { default as ProductsFiltered } from './ProductsFiltered';
+export { tagListWithFiltered } from './tagListWithFiltered';
+export { ProductCardsSort } from './ProductCardsSort';
+export { listWithFiltered } from './listWithFiltered';
+export { ProductCardsTitle } from './ProductCardsTitle';

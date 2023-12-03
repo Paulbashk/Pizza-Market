@@ -1,7 +1,7 @@
 import { renderApp } from '@/test/utils';
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import Dropdown from './index';
+import { Dropdown } from '.';
 
 jest.mock('hex-rgb', () => () => '');
 

@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react';
 import { theme } from '@/shared/libs/assets/styles';
 import { renderApp } from '@/test/utils';
-import Button, { ButtonColors } from './index';
+import { Button, ButtonColors } from '.';
 
 describe('UI Button', () => {
   it('should render with content', () => {

@@ -2,7 +2,7 @@ import React from 'react';
 import { renderApp } from '@/test/utils';
 import { SwiperSlide } from 'swiper/react';
 import { screen } from '@testing-library/react';
-import Slider from './index';
+import { Slider } from '.';
 
 jest.mock('swiper/react', () => ({
   Swiper: ({

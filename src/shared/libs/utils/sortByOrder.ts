@@ -1,4 +1,4 @@
-const sortByOrder = <T extends string | number>(
+export const sortByOrder = <T extends string | number>(
   type: 'DESC' | 'ASC',
   itr: T[] | object,
 ) =>
@@ -23,5 +23,3 @@ const sortByOrder = <T extends string | number>(
       return 0;
     },
   );
-
-export default sortByOrder;

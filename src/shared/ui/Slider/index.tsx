@@ -1,5 +1,7 @@
+'use client';
+
 // modules
-import React from 'react';
+import { type ReactNode } from 'react';
 import SwiperCore, { Virtual, SwiperOptions } from 'swiper';
 import { Swiper } from 'swiper/react';
 
@@ -11,11 +13,11 @@ import 'swiper/scss/pagination';
 import 'swiper/scss/navigation';
 
 interface SliderProps extends SwiperOptions {
-  children: React.ReactNode;
+  children: ReactNode;
   onBeforeInit?: (Swiper: SwiperCore) => void;
 }
 
-const Slider = (props: SliderProps) => {
+export const Slider = (props: SliderProps) => {
   const { children, modules, navigation, ...otherProps } = props;
 
   return (
@@ -29,5 +31,3 @@ const Slider = (props: SliderProps) => {
     </Swiper>
   );
 };
-
-export default Slider;

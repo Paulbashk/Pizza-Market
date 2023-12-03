@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react';
 import { renderApp } from '@/test/utils';
-import ArrowButton from './index';
+import { ArrowButton } from '.';
 
 describe('UI ArrowButton', () => {
   it('should render', () => {

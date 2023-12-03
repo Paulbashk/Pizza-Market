@@ -1,20 +1,20 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import type { HandleReject } from '@/shared/libs/types';
-import { tagAPI } from '@/entities/tag/api';
-import type { Tag } from './types';
+import {
+  TagService,
+  type FetchGetAllRequest,
+  type FetchGetAllResponse,
+} from '@/entities/tag/api';
 
 export const getTagsThunk = createAsyncThunk<
-  Tag.FetchAllResponse,
-  Tag.FetchAllRequest,
+  FetchGetAllResponse,
+  FetchGetAllRequest,
   HandleReject
 >('tags/fetchAll', async (params, { rejectWithValue }) => {
   try {
-    const response = await tagAPI.fetchAll<
-      Tag.FetchAllResponse,
-      Tag.FetchAllRequest
-    >(params);
+    const { data } = await TagService.fetchGetAll(params);
 
-    return response.data;
+    return data;
   } catch (error) {
     return rejectWithValue('Произошла ошибка при загрузке категорий товаров');
   }

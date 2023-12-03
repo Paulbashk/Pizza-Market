@@ -1,13 +1,17 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle, theme } from '@/shared/libs/assets/styles';
-import { AppState, AppStore, rootReducer } from '@/store';
+import {
+  type AppState,
+  type AppStore,
+  persistedReducer,
+} from '@/app/_root/store';
 import { RenderOptions, render } from '@testing-library/react';
 import { PreloadedState, configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 
 interface ExtendedRenderOptions extends Omit<RenderOptions, 'queries'> {
-  reducer?: typeof rootReducer;
+  reducer?: typeof persistedReducer;
   preloadedState?: PreloadedState<AppState>;
   store?: AppStore;
 }
@@ -15,7 +19,7 @@ interface ExtendedRenderOptions extends Omit<RenderOptions, 'queries'> {
 const renderApp = (
   ui: React.ReactElement,
   {
-    reducer = rootReducer,
+    reducer = persistedReducer,
     preloadedState = {},
     store = configureStore({ reducer, preloadedState }),
     ...renderOptions

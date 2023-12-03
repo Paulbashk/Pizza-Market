@@ -1,7 +1,7 @@
 // Public exports
-export { ProductList } from './ui';
+export * as productUI from './ui';
 
-export * as productLibs from './libs';
+export * as productLibs from './libs/utils';
 
 export * as productModel from './model';
 

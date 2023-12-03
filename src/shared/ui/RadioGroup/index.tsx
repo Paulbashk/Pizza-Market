@@ -1,47 +1,31 @@
-import React, { ComponentPropsWithoutRef } from 'react';
-import { useGenerateId } from '@/shared/libs/hooks';
-import RadioGroupContext from './context';
+'use client';
+
+import { type ComponentPropsWithoutRef, type ChangeEvent } from 'react';
+import { RadioGroupContext } from './context';
+import { useRadioGroupValue } from './hooks';
 
 type PropsWithout = ComponentPropsWithoutRef<'div'> & {
-  onChange?: (
-    event: React.ChangeEvent<HTMLInputElement>,
-    value?: string,
-  ) => void;
+  onChange?: (event: ChangeEvent<HTMLInputElement>, value?: string) => void;
 };
 
 interface RadioGroupProps extends PropsWithout {
-  onChange?: (
-    event: React.ChangeEvent<HTMLInputElement>,
-    value?: string,
-  ) => void;
+  onChange?: (event: ChangeEvent<HTMLInputElement>, value?: string) => void;
   defaultValue: string | number;
   name?: string;
 }
 
-const RadioGroup = ({
+export const RadioGroup = ({
   onChange,
   defaultValue,
   name: propName,
   children,
   ...otherProps
 }: RadioGroupProps) => {
-  const [value, setValue] = React.useState<string | number>(defaultValue);
-  const { current: name } = useGenerateId(propName, true);
-
-  const contextValue = React.useMemo(
-    () => ({
-      name,
-      value,
-      onChange(event: React.ChangeEvent<HTMLInputElement>) {
-        setValue(event.target.value);
-
-        if (onChange) {
-          onChange(event, event.target.value);
-        }
-      },
-    }),
-    [name, onChange, setValue, value],
-  );
+  const contextValue = useRadioGroupValue({
+    defaultValue,
+    propName,
+    onChange,
+  });
 
   return (
     <RadioGroupContext.Provider value={contextValue}>
@@ -51,5 +35,3 @@ const RadioGroup = ({
     </RadioGroupContext.Provider>
   );
 };
-
-export default RadioGroup;

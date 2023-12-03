@@ -1,62 +1,35 @@
-import { GetStaticProps } from 'next';
-import axios from 'axios';
-
-// hooks
-import { Layout } from '@/shared/ui';
+import { notFound } from 'next/navigation';
 
 // components
-import { SectionBanners } from '@/modules/banners';
-import { SectionProducts } from '@/modules/products';
+import { BannerSection } from '@/modules/banners';
+import { ProductCardsSection } from '@/modules/products';
 import { Header } from '@/modules/header';
 
-// types
-import { IBanner, ICategory, ILogo } from '@/shared/types/interfaces';
+// libs
+import { getSettings } from '@/screens/category/api';
+import { getCategoryIdBySlug } from '@/screens/category/libs';
 
-export interface CategoryProps {
-  categories: ICategory[];
-  categoryId: number;
-  logo: ILogo;
-  banners: IBanner[];
+interface CategoryScreenParams {
+  params: {
+    slug?: string;
+  };
 }
 
-const Category = ({ categoryId, categories, logo, banners }: CategoryProps) => {
-  // const { query } = useRouter();
-  // const { setCategory } = useActions();
+export const CategoryScreen = async ({ params }: CategoryScreenParams) => {
+  const { categories, logo, banners } = await getSettings();
+  const { slug } = params;
 
-  // const { slug } = query;
+  const categoryId = getCategoryIdBySlug(categories, slug);
 
-  console.log('123');
-
-  // setCategory(category.id);
+  if (categoryId === -1) {
+    notFound();
+  }
 
   return (
-    <Layout title="Главная">
+    <>
       <Header categoryId={categoryId} categories={categories} logo={logo} />
-      {banners.length > 0 && <SectionBanners banners={banners} />}
-      <SectionProducts category={categories[categoryId]} />
-    </Layout>
+      {banners.length > 0 && <BannerSection banners={banners} />}
+      <ProductCardsSection category={categories[categoryId]} />
+    </>
   );
 };
-
-export const getStaticProps: GetStaticProps<CategoryProps> = async () => {
-  const { data: categories } = await axios.get(
-    `${process.env.NEXT_PUBLIC_API_URL}/categories`,
-  );
-
-  const { data: logo } = await axios.get(
-    `${process.env.NEXT_PUBLIC_API_URL}/logo`,
-  );
-
-  const { data: banners } = await axios.get(
-    `${process.env.NEXT_PUBLIC_API_URL}/banners`,
-  );
-
-  const categoryId = 0;
-
-  return {
-    props: { categories, logo, banners, categoryId },
-    revalidate: 60,
-  };
-};
-
-export default Category;

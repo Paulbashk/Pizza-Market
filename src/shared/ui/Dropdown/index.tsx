@@ -1,120 +1,59 @@
-import React, { ComponentPropsWithoutRef } from 'react';
+'use client';
+
+import {
+  type ComponentPropsWithoutRef,
+  type ReactElement,
+  cloneElement,
+  useMemo,
+} from 'react';
+
+// hooks
+import { useHandleStateDropdown, useDropdownEvents } from './hooks';
 
 import * as S from './styled';
 
 interface DropdownProps extends ComponentPropsWithoutRef<'div'> {
-  trigger: React.ReactElement;
-  items: Array<React.ReactElement>;
+  trigger: ReactElement;
+  items: Array<ReactElement>;
   onOpen?: (open: boolean) => boolean;
   selected?: number;
   onSelected?: (id: number) => void;
 }
 
 // Dropdown menu with tracking selections
-const Dropdown = (props: DropdownProps) => {
-  const [open, setOpen] = React.useState<boolean>(false);
-  const dropdownRef = React.useRef<HTMLDivElement>(null);
-
+export const Dropdown = (props: DropdownProps) => {
   const { onSelected, selected, onOpen, trigger, items, ...otherProps } = props;
-
   const { onClick: triggerOnClick, ...otherTriggerProps } = trigger.props;
 
-  const setOpenWithOnOpen = (value: boolean) => {
-    setOpen(prevState => {
-      if (prevState === value) return prevState;
-
-      if (onOpen) {
-        return onOpen(value);
-      }
-
-      return value;
+  const { dropdownRef, isOpen, setOpenWithOnOpen, handleOpen, renderItem } =
+    useHandleStateDropdown({
+      onOpen,
+      triggerOnClick,
+      selected,
+      onSelected,
     });
-  };
 
-  const handleOpen = () => {
-    setOpenWithOnOpen(!open);
+  useDropdownEvents({
+    dropdownRef,
+    setOpenWithOnOpen,
+  });
 
-    if (triggerOnClick) {
-      triggerOnClick();
-    }
-  };
-
-  const handleClick = (id: number) => {
-    if (selected !== undefined && selected === id) return;
-
-    setOpenWithOnOpen(false);
-
-    if (onSelected) {
-      onSelected(id);
-    }
-  };
-
-  const renderItem = (item: React.ReactElement, id: number) => {
-    const { onClick, ...otherItemProps } = item.props;
-
-    const hanldeOnClick = (event: MouseEvent) => {
-      handleClick(id);
-
-      if (onClick) {
-        onClick(event);
-      }
-    };
-
-    return React.cloneElement(item, {
-      key: id,
-      role: 'option',
-      onClick: hanldeOnClick,
-      ...otherItemProps,
-    });
-  };
-
-  React.useEffect(() => {
-    if (dropdownRef.current) {
-      const ref = dropdownRef.current;
-      let mouseLeaveTimer: ReturnType<typeof setTimeout> | undefined;
-
-      const handleOutsideClick = (event: MouseEvent): void => {
-        if (!event.composedPath().includes(ref)) {
-          setOpenWithOnOpen(false);
-        }
-      };
-
-      const handleMouseEnter = (): void => {
-        clearTimeout(mouseLeaveTimer);
-        setOpenWithOnOpen(true);
-      };
-
-      const handleMouseLeave = (): void => {
-        mouseLeaveTimer = setTimeout(() => {
-          setOpenWithOnOpen(false);
-        }, 1500);
-      };
-
-      ref.addEventListener('mouseenter', handleMouseEnter, false);
-      ref.addEventListener('mouseleave', handleMouseLeave, false);
-      document.body.addEventListener('click', handleOutsideClick, false);
-
-      return () => {
-        ref.removeEventListener('mouseenter', handleMouseEnter, false);
-        ref.removeEventListener('mouseleave', handleMouseLeave, false);
-        document.body.removeEventListener('click', handleOutsideClick, false);
-
-        if (mouseLeaveTimer !== undefined) {
-          clearTimeout(mouseLeaveTimer);
-        }
-      };
-    }
-  }, []);
+  const triggerMemo = useMemo(
+    () => ({
+      render: cloneElement(trigger, {
+        onClick: handleOpen,
+        role: 'label',
+        isActive: isOpen,
+        ...otherTriggerProps,
+      }),
+    }),
+    [onSelected],
+  );
 
   return (
     <S.Dropdown ref={dropdownRef} {...otherProps}>
-      {React.cloneElement(trigger, {
-        onClick: handleOpen,
-        role: 'label',
-        isActive: open,
-        ...otherTriggerProps,
-      })}
-      {open && items.length > 0 ? (
+      {triggerMemo.render}
+      {isOpen && items.length > 0 ? (
         <S.DropdownInner role="listbox">
           <S.DropdownContent>
             <S.DropdownMenu>{items.map(renderItem)}</S.DropdownMenu>
@@ -124,5 +63,3 @@ const Dropdown = (props: DropdownProps) => {
     </S.Dropdown>
   );
 };
-
-export default Dropdown;

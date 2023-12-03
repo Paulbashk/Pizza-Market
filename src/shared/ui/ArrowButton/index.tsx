@@ -1,8 +1,8 @@
-import React, { ComponentPropsWithoutRef } from 'react';
+import { type ComponentPropsWithoutRef } from 'react';
 import { MdKeyboardArrowLeft } from 'react-icons/md';
 import { Button } from './styled';
 
-function ArrowButton(props: ComponentPropsWithoutRef<'button'>) {
+export function ArrowButton(props: ComponentPropsWithoutRef<'button'>) {
   const { children, ...otherProps } = props;
 
   return (
@@ -11,5 +11,3 @@ function ArrowButton(props: ComponentPropsWithoutRef<'button'>) {
     </Button>
   );
 }
-
-export default ArrowButton;

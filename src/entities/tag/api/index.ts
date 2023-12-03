@@ -1,1 +1,2 @@
-export * as tagAPI from './TagApi';
+export { TagService } from './tagService';
+export type { FetchGetAllRequest, FetchGetAllResponse } from './types';

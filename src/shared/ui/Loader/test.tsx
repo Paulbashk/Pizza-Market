@@ -1,6 +1,6 @@
 import { renderApp } from '@/test/utils';
 import { screen } from '@testing-library/react';
-import Loader from './index';
+import { Loader } from '.';
 
 describe('UI Loader', () => {
   it('should render nothing is loading prop is false', () => {

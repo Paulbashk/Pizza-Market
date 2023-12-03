@@ -1,3 +1,1 @@
-import ApiClient from './apiClient';
-
-export default ApiClient;
+export { default as ApiClient } from './instance';

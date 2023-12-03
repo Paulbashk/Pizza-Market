@@ -1,11 +1,12 @@
-import React from 'react';
-
 // components
 import { Dropdown } from '@/shared/ui';
 import { SortedLabel } from '@/entities/sorted/ui';
 
+// libs/utils
+import { getDefaultSortByType } from '@/entities/sorted/libs/utils';
+
 // types
-import { ISort } from '@/entities/sorted/types';
+import { type ISort } from '@/entities/sorted/types';
 
 // assets
 import * as S from './styled';
@@ -16,23 +17,24 @@ interface SortedProps {
   onSelected: (id: number) => void;
 }
 
-function Sorted({ sort, items, onSelected }: SortedProps) {
-  const defaultSortId = items.findIndex(item => item.type === sort);
+export function Sorted({ sort, items, onSelected }: SortedProps) {
+  const { item: defaultItem, index: defaultIndex } = getDefaultSortByType({
+    items,
+    sort,
+  });
 
   return (
-    <S.ProductsSorted>
+    <S.Wrapper>
       <Dropdown
         onSelected={onSelected}
-        trigger={<SortedLabel label={items[defaultSortId].label} />}
+        trigger={<SortedLabel label={defaultItem.label} />}
         items={items.map((item, id) => (
-          <S.DropdownItem key={item.value} $active={defaultSortId === id}>
+          <S.DropdownItem key={item.value} $active={defaultIndex === id}>
             {item.value}
           </S.DropdownItem>
         ))}
-        selected={defaultSortId}
+        selected={defaultIndex}
       />
-    </S.ProductsSorted>
+    </S.Wrapper>
   );
 }
-
-export default Sorted;

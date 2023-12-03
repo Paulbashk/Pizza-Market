@@ -22,17 +22,17 @@
     {
       "id": 0,
       "name": "Пиццы",
-      "slug": "/"
+      "slug": "index"
     },
     {
       "id": 1,
       "name": "Напитки",
-      "slug": "/drink"
+      "slug": "drink"
     },
     {
       "id": 2,
       "name": "Закуски",
-      "slug": "/snacks"
+      "slug": "snacks"
     }
   ],
   "tags": [
@@ -55,6 +55,16 @@
       "id": 3,
       "category": 0,
       "name": "Гриль"
+    },
+    {
+      "id": 4,
+      "category": 2,
+      "name": "Горячие"
+    },
+    {
+      "id": 5,
+      "category": 2,
+      "name": "Холодные"
     }
   ],
   "products": [
@@ -113,7 +123,7 @@
           "items": [
             {
               "label": "тонкое",
-              "price": 800
+              "price": 25
             },
             {
               "label": "традиционное",
@@ -441,6 +451,114 @@
           ]
         }
       ]
+    },
+    {
+      "id": 9,
+      "category": 1,
+      "tag": 0,
+      "priority": 1,
+      "title": "Coca cola",
+      "price": 80,
+      "image": "/products/cocacola.webp",
+      "options": [
+        {
+          "name": "size",
+          "activeItem": "0.3л",
+          "items": [
+            {
+              "label": "0.3л",
+              "price": 0
+            },
+            {
+              "label": "0.5л",
+              "price": 20
+            },
+            {
+              "label": "1л",
+              "price": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "category": 1,
+      "tag": 0,
+      "priority": 0,
+      "title": "Чай",
+      "price": 50,
+      "image": "/products/tea.webp",
+      "options": [
+        {
+          "name": "size",
+          "activeItem": "0.3л",
+          "items": [
+            {
+              "label": "0.3л",
+              "price": 0
+            },
+            {
+              "label": "0.5л",
+              "price": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "category": 1,
+      "tag": 0,
+      "priority": 1,
+      "title": "Вода без газов",
+      "price": 50,
+      "image": "/products/aqua.webp",
+      "options": [
+        {
+          "name": "size",
+          "activeItem": "0.5л",
+          "items": [
+            {
+              "label": "0.5л",
+              "price": 0
+            },
+            {
+              "label": "1л",
+              "price": 25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "category": 2,
+      "tag": 0,
+      "priority": 4,
+      "title": "Чебурек",
+      "price": 50,
+      "image": "/products/cheburek.webp",
+      "options": []
+    },
+    {
+      "id": 13,
+      "category": 2,
+      "tag": 4,
+      "priority": 1,
+      "title": "Шашлык из курицы",
+      "price": 350,
+      "image": "/products/shashluk.webp",
+      "options": []
+    },
+    {
+      "id": 14,
+      "category": 2,
+      "tag": 5,
+      "priority": 1,
+      "title": "Салат цезарь",
+      "price": 225,
+      "image": "/products/cezar.webp"
     }
   ]
 }

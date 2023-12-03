@@ -1,4 +1,4 @@
-import React, { ComponentPropsWithoutRef } from 'react';
+import { memo, type ComponentPropsWithoutRef, type ReactNode } from 'react';
 import * as S from './styled';
 
 export enum ButtonColors {
@@ -9,14 +9,16 @@ export enum ButtonColors {
 interface ButtonProps extends ComponentPropsWithoutRef<'button'> {
   color: ButtonColors;
   isActive: boolean;
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-function Button({ isActive, color, ...props }: ButtonProps) {
+const StyleButtonMemo = memo(S.Button);
+
+export const Button = ({ isActive, color, ...props }: ButtonProps) => {
   const { children, ...otherProps } = props;
 
   return (
-    <S.Button
+    <StyleButtonMemo
       type={props.type ? 'button' : 'submit'}
       $color={color}
       $active={isActive}
@@ -24,8 +26,6 @@ function Button({ isActive, color, ...props }: ButtonProps) {
       {...otherProps}
     >
       {children}
-    </S.Button>
+    </StyleButtonMemo>
   );
-}
-
-export default Button;
+};

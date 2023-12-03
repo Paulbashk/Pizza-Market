@@ -1,6 +1,6 @@
 import { createSelector } from '@reduxjs/toolkit';
 import { makeSelectHandleState } from '@/shared/libs/selectors';
-import { type AppState } from '@/store';
+import { type AppState } from '@/app/_root/store';
 import { tagsAdapter } from './slice';
 import { type Tag, TagVariables } from './types';
 
@@ -18,3 +18,7 @@ export const getById = (id: Tag.Variable) =>
   createSelector(getEntities, items =>
     id === TagVariables.ALL ? { name: 'Все' } : items[id]!,
   );
+
+export const getIdsWithAll = createSelector(getIds, ids =>
+  ids.length !== 0 ? [TagVariables.ALL, ...ids] : [],
+);

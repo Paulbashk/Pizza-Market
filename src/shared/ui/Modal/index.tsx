@@ -1,19 +1,20 @@
-import React, {
-  useRef,
+'use client';
+
+import {
   useEffect,
-  useState,
-  ComponentPropsWithoutRef,
+  type ComponentPropsWithoutRef,
+  type ReactNode,
 } from 'react';
 import ReactDOM from 'react-dom';
 
-// utils
-import { callIsDefined } from '@/shared/libs/utils';
+// hooks
+import { useHandleChainedModal } from './hooks';
 
 // assets
 import { MainModal, ModalOverlay, ModalWindow } from './styled';
 
 interface ModalProps extends ComponentPropsWithoutRef<'div'> {
-  children: React.ReactNode;
+  children: ReactNode;
   isOpen: boolean;
   onEscapeKeydown?: (event?: KeyboardEvent) => void;
   allowScroll?: boolean;
@@ -23,7 +24,7 @@ interface ModalProps extends ComponentPropsWithoutRef<'div'> {
   afterClose?: () => void;
 }
 
-const Modal = ({
+export const Modal = ({
   children,
   isOpen: isOpenProp,
   onEscapeKeydown,
@@ -34,37 +35,21 @@ const Modal = ({
   afterClose,
   ...modalProps
 }: ModalProps) => {
-  const prevBodyOverflowStyle = useRef<null | string>(null);
-  const isTransitioning = useRef<boolean>(false);
-
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const {
+    prevBodyOverflowStyle,
+    isTransitioning,
+    isOpen,
+    handleChange,
+    handleKeydown,
+  } = useHandleChainedModal({
+    afterOpen,
+    afterClose,
+    onEscapeKeydown,
+    isOpenProp,
+  });
 
   // Handle opening and closing
   useEffect(() => {
-    const handleIsOpenChange = (value: boolean) => {
-      setIsOpen(value);
-
-      value ? callIsDefined(afterOpen) : callIsDefined(afterClose);
-    };
-
-    function handleChange(callback: (() => void | Promise<void>) | undefined) {
-      if (!callback) return handleIsOpenChange(isOpenProp);
-
-      const maybePromise = callback();
-
-      if (typeof maybePromise?.then !== 'function') {
-        return handleIsOpenChange(isOpenProp);
-      }
-
-      isTransitioning.current = true;
-
-      maybePromise.then(() => {
-        handleIsOpenChange(isOpenProp);
-
-        isTransitioning.current = false;
-      });
-    }
-
     if (isOpen !== isOpenProp && !isTransitioning.current) {
       if (isOpen) {
         handleChange(beforeOpen && beforeOpen);
@@ -84,12 +69,6 @@ const Modal = ({
 
   // Handle Escape keydown
   useEffect(() => {
-    function handleKeydown(event: KeyboardEvent) {
-      if (event.key === 'Escape') {
-        onEscapeKeydown && onEscapeKeydown(event);
-      }
-    }
-
     if (isOpen) {
       document.addEventListener('keydown', handleKeydown);
     }
@@ -126,4 +105,3 @@ const Modal = ({
 };
 
 export { ModalOverlay, ModalWindow };
-export default Modal;
