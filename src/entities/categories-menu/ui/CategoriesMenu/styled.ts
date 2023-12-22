@@ -1,5 +1,6 @@
+import Link from 'next/link';
 import { Menu } from '@/shared/ui';
-import { styled } from 'styled-components';
+import { styled, css } from 'styled-components';
 
 export const StyledMenu = styled(Menu)`
   display: flex;
@@ -8,4 +9,31 @@ export const StyledMenu = styled(Menu)`
   column-gap: 32px;
   margin: 0;
   padding: 0;
+`;
+
+interface MenuLinkStyles {
+  $active: boolean;
+}
+
+export const MenuLink = styled(Link)<MenuLinkStyles>`
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: ${props => props.theme.colors.dark};
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: ${props => props.theme.colors.yellow};
+  }
+
+  ${props =>
+    props.$active &&
+    css`
+      color: ${props.theme.colors.yellow};
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    `}
 `;

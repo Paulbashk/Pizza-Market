@@ -22,17 +22,17 @@
     {
       "id": 0,
       "name": "Пиццы",
-      "slug": "index"
+      "slug": "/"
     },
     {
       "id": 1,
       "name": "Напитки",
-      "slug": "drink"
+      "slug": "/drink"
     },
     {
       "id": 2,
       "name": "Закуски",
-      "slug": "snacks"
+      "slug": "/snacks"
     }
   ],
   "tags": [

@@ -1,0 +1,1 @@
+export { CreatedTitle } from './styled';

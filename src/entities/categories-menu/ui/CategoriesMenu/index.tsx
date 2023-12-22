@@ -1,39 +1,42 @@
 'use client';
 
-// hooks
-import { useSelectCategory } from '@/entities/categories-menu/libs/hooks';
+import { memo } from 'react';
+import { usePathname } from 'next/navigation';
 
 // types
 import type { ICategory } from '@/shared/types/interfaces';
 
-// components
-import { CategoryLink } from '@/entities/categories-menu/ui/CategoryLink';
+// libs
+import { useCategoryLink } from '@/entities/categories-menu/libs/hooks';
 
 // assets
 import * as S from './styled';
 
 interface CategoriesMenuProps {
   categories: ICategory[];
-  categoryId: number;
 }
 
-export const CategoriesMenu = ({
-  categoryId,
-  categories,
-}: CategoriesMenuProps) => {
-  const ANCHOR_TAG = '#section-products';
+const StyledMenuMemo = memo(S.StyledMenu);
+const CategoryLinkMemo = memo(S.MenuLink);
 
-  const handleClick = useSelectCategory(categoryId);
+export const CategoriesMenu = ({ categories }: CategoriesMenuProps) => {
+  const ANCHOR_TAG = '#section-products';
+  const pathname = usePathname();
+
+  const { handleClick } = useCategoryLink({ anchor: ANCHOR_TAG });
 
   return (
-    <S.StyledMenu
+    <StyledMenuMemo
       items={categories}
-      renderItem={(item: ICategory) => (
-        <CategoryLink
-          item={item}
-          handleClick={handleClick}
-          anchorTag={ANCHOR_TAG}
-        />
+      renderItem={({ slug, name }: ICategory) => (
+        <CategoryLinkMemo
+          href={slug}
+          $active={slug === pathname}
+          onClick={handleClick}
+          scroll={false}
+        >
+          {name}
+        </CategoryLinkMemo>
       )}
     />
   );

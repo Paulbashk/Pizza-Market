@@ -1,6 +1,7 @@
 import { type Product } from '@/entities/product/model/types';
+import { findIndexByKeyObject } from '@/shared/libs/utils';
 
 export const getActiveOptionId = (option: Product.Options): number =>
   option.activeItem !== undefined
-    ? option.items.findIndex(item => item.label === option.activeItem)
+    ? findIndexByKeyObject(option.items, 'label', option.activeItem)
     : 0;

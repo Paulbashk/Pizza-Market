@@ -1,5 +1,6 @@
-import { EntityState } from '@reduxjs/toolkit';
+import type { EntityId, EntityState } from '@reduxjs/toolkit';
 import type { QueryState } from '@/shared/libs/types';
+import type { ReactElement } from 'react';
 
 export namespace Product {
   export type State = QueryState;
@@ -31,4 +32,18 @@ export namespace Product {
   export type TransformOption = {
     [name: string]: Option;
   };
+
+  export interface Price {
+    total: number;
+    options?: TransformOption;
+  }
+
+  export interface RenderButtonProps {
+    id: EntityId;
+    title: string;
+    image: string;
+    price: Price;
+  }
+
+  export type RenderButton = (product: RenderButtonProps) => ReactElement;
 }

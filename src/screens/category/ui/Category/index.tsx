@@ -1,13 +1,14 @@
 import { notFound } from 'next/navigation';
 
+// service
+import { categoryScreenService } from '@/shared/server/api';
+
+// libs
+import { getCategoryIdBySlug } from '@/shared/libs/utils/getCategoryIdBySlug';
+
 // components
 import { BannerSection } from '@/modules/banners';
 import { ProductCardsSection } from '@/modules/products';
-import { Header } from '@/modules/header';
-
-// libs
-import { getSettings } from '@/screens/category/api';
-import { getCategoryIdBySlug } from '@/screens/category/libs';
 
 interface CategoryScreenParams {
   params: {
@@ -16,7 +17,7 @@ interface CategoryScreenParams {
 }
 
 export const CategoryScreen = async ({ params }: CategoryScreenParams) => {
-  const { categories, logo, banners } = await getSettings();
+  const { categories, banners } = await categoryScreenService();
   const { slug } = params;
 
   const categoryId = getCategoryIdBySlug(categories, slug);
@@ -27,7 +28,6 @@ export const CategoryScreen = async ({ params }: CategoryScreenParams) => {
 
   return (
     <>
-      <Header categoryId={categoryId} categories={categories} logo={logo} />
       {banners.length > 0 && <BannerSection banners={banners} />}
       <ProductCardsSection category={categories[categoryId]} />
     </>

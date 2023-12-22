@@ -1,1 +1,0 @@
-export { formatSlugAndIsCurrentPath } from './formatSlugAndIsCurrentPath';

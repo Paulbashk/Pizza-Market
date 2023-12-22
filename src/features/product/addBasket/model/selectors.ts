@@ -1,18 +1,20 @@
-import { AppState } from '@/app/_root/store';
-import { createSelector } from '@reduxjs/toolkit';
-import { Basket } from './types';
+import { EntityId, createSelector } from '@reduxjs/toolkit';
+import { type AppState } from '@/app/_root/store';
+import { productBasketModel } from '@/entities/product-basket';
+import { arrayObjectFilterByKey, reduceSumByKey } from '@/shared/libs/utils';
 
 const all = (state: AppState) => state.basket;
 
-const items = (state: AppState) => all(state).items;
-
 export const getHeaderInfo = createSelector([all], state => ({
   price: state.price.count,
-  isProducts: state.items.length > 0,
+  isProducts: state.ids.length > 0,
 }));
 
-export const getItemQuantityById = (id: Basket.ProductId) =>
-  createSelector(
-    [items],
-    variables => [...variables].filter(({ id: _id }) => _id === id).length,
-  );
+export const getQuantityByProductId = (productId: EntityId) =>
+  createSelector([productBasketModel.selects.getAll], items => {
+    const filteredItems = arrayObjectFilterByKey(items, 'productId', productId);
+
+    return filteredItems.length > 0
+      ? reduceSumByKey(filteredItems, 'quantity')
+      : 0;
+  });

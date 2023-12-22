@@ -6,5 +6,3 @@ export {
   type Filter as ProductFilterTypes,
   SortEnumTypes as ProductSortEnumTypes,
 } from './model/types';
-
-export { useProductsTitle } from './libs/hooks';

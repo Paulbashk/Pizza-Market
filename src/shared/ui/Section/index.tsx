@@ -5,13 +5,9 @@ interface SectionProps extends ComponentPropsWithoutRef<'div'> {
   name?: string;
 }
 
-export const Section = ({
-  name = 'section',
-  children,
-  ...otherProps
-}: SectionProps) => (
+export const Section = ({ name, children, ...otherProps }: SectionProps) => (
   <section
-    className={name}
+    className={name ? ['section', name].join(' ') : 'section'}
     id={name !== 'section' ? `section-${name}` : undefined}
   >
     <Container>

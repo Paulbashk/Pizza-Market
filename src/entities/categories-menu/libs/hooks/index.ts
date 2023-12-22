@@ -1,2 +1,1 @@
-export { useCategorySlug } from './useCategorySlug';
-export { useSelectCategory } from './useSelectCategory';
+export { useCategoryLink } from './useCategoryLink';

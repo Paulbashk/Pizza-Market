@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
-import { basketModel } from '@/features/product/addBasket';
+import { selects } from '@/features/product/addBasket/model';
 
-export const useHeaderInfo = () =>
-  useSelector(basketModel.selects.getHeaderInfo);
+const { getHeaderInfo } = selects;
+
+export const useHeaderInfo = () => useSelector(getHeaderInfo);

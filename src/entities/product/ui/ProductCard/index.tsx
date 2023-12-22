@@ -19,37 +19,37 @@ import type { ProductCardProps } from './types';
 // assets
 import * as S from './styled';
 
-const Title = memo(S.Title);
+const TitleMemo = memo(S.Title);
 const ProductCardOptionsMemo = memo(ProductCardOptions);
 const ImageMemo = memo(ProductCardImage);
 
 export function ProductCard({ id, renderButton }: ProductCardProps) {
-  const { state, product, setProduct } = useProductState(id);
+  const { state, totalPrice, setTotalPrice } = useProductState(id);
   const { title, image, isOptions, options, defaultPrice } = state;
 
   const handleSelect = useSelectProductOption({
     isOptions,
     options,
     defaultPrice,
-    setProduct,
+    setTotalPrice,
   });
 
   return (
     <S.Wrapper>
       <ImageMemo image={image} title={title} />
       <S.Content>
-        <Title>{title}</Title>
+        <TitleMemo>{title}</TitleMemo>
         {isOptions && (
           <ProductCardOptionsMemo handleSelect={handleSelect} id={id} />
         )}
         <ProductCardFooter
           id={id}
+          title={title}
+          image={image}
+          price={totalPrice}
           renderButton={renderButton}
-          product={product}
         />
       </S.Content>
     </S.Wrapper>
   );
 }
-
-export type { ProductCardRenderButton } from './types';

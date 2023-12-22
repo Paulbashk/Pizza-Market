@@ -1,4 +1,6 @@
 import { memo, type ComponentPropsWithoutRef, type ReactNode } from 'react';
+
+// assets
 import * as S from './styled';
 
 export enum ButtonColors {

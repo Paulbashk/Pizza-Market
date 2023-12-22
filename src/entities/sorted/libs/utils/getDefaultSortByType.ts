@@ -1,4 +1,5 @@
 import { type ISort } from '@/entities/sorted/types';
+import { findIndexByKeyObject } from '@/shared/libs/utils';
 
 type TypeGetDefaultParam = {
   items: ISort[];
@@ -6,7 +7,7 @@ type TypeGetDefaultParam = {
 };
 
 export const getDefaultSortByType = ({ items, sort }: TypeGetDefaultParam) => {
-  const index = items.findIndex(item => item.type === sort);
+  const index = findIndexByKeyObject(items, 'type', sort);
 
   return {
     item: items[index],

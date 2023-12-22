@@ -11,3 +11,6 @@ export { Modal, ModalOverlay, ModalWindow } from './Modal';
 export { Error } from './Error';
 export { Section } from './Section';
 export { Menu } from './Menu';
+export { CreatedTitle } from './CreatedTitle';
+export { CircleButton, CircleButtonColors } from './CircleButton';
+export { InfoItem } from './InfoItem';

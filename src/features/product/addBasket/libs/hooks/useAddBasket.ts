@@ -1,23 +1,34 @@
 import { type MouseEvent } from 'react';
-import { useSelector } from 'react-redux';
 import { useAppDispatch } from '@/shared/libs/hooks';
-import type { Basket } from '@/features/product/addBasket/model/types';
-import { selects, actions } from '@/features/product/addBasket/model';
+import { productBasketModel } from '@/entities/product-basket';
+import type { ProductTypes } from '@/entities/product';
+import { useQuantityByProductId } from './useQuantityByProductId';
 
-type AddBasketParam = {
-  id: Basket.ProductId;
-  product: Basket.ProductSelect;
+type AddBasketParam = (product: ProductTypes.RenderButtonProps) => {
+  quantity: number;
+  handleAddBasket: (event: MouseEvent<HTMLElement>) => void;
 };
 
-export const useAddBasket = ({ id, product }: AddBasketParam) => {
+const { actions } = productBasketModel;
+
+export const useAddBasket: AddBasketParam = ({ id, price, title, image }) => {
   const dispatch = useAppDispatch();
-  const quantity = useSelector(selects.getItemQuantityById(id));
 
-  const clickAddBasket = (event: MouseEvent<HTMLElement>) => {
-    event.preventDefault();
+  const quantity = useQuantityByProductId(id);
 
-    dispatch(actions.addProduct({ id, ...product }));
+  const objAddBasket = {
+    productId: id,
+    total: price.total,
+    title,
+    image,
+    options: price.options,
   };
 
-  return { quantity, clickAddBasket };
+  const handleAddBasket = (event: MouseEvent<HTMLElement>) => {
+    event.preventDefault();
+
+    dispatch(actions.addProduct(objAddBasket));
+  };
+
+  return { quantity, handleAddBasket };
 };

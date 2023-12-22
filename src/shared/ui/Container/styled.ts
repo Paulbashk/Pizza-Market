@@ -10,7 +10,7 @@ export const Container = styled.div`
   margin-left: auto;
 
   @media (min-width: ${props => props.theme.breakpoints.XXL}px) {
-    max-width: 1140px;
+    max-width: 1300px;
   }
 
   @media (max-width: ${props => props.theme.breakpoints.LG}px) {

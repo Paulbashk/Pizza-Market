@@ -13,8 +13,8 @@ import * as S from './styled';
 
 interface CategoryLinkProps {
   item: ICategory;
-  handleClick: (id: number, event: MouseEvent<HTMLElement>) => void;
   anchorTag: string;
+  handleClick: (event: MouseEvent<HTMLElement>) => void;
 }
 
 export const CategoryLink = ({
@@ -22,20 +22,18 @@ export const CategoryLink = ({
   handleClick,
   anchorTag,
 }: CategoryLinkProps) => {
-  const { id, name, slug } = item;
+  const { name, slug } = item;
 
-  const { linkName, isPath, onClick } = useCategorySlug({
-    id,
+  const { linkName, isPath } = useCategorySlug({
     slug,
     anchorTag,
-    callbackClick: handleClick,
   });
 
   return (
     <S.MenuLink
       href={linkName}
       $active={isPath}
-      onClick={onClick}
+      onClick={handleClick}
       scroll={false}
     >
       {name}

@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import styled from 'styled-components';
 
 export const LogoLink = styled(Link)`
@@ -20,10 +19,11 @@ export const LogoLink = styled(Link)`
   }
 `;
 
-export const LogoImage = styled(Image)`
-  width: 70px;
-  min-width: 70px;
+export const WrapperImage = styled.div`
   margin-right: 8px;
+  position: relative;
+  width: 70px;
+  height: 70px;
 `;
 
 export const LogoWrapper = styled.div`

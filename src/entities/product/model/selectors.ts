@@ -1,5 +1,5 @@
 import { type AppState } from '@/app/_root/store';
-import { EntityId, createSelector } from '@reduxjs/toolkit';
+import { type EntityId, createSelector } from '@reduxjs/toolkit';
 import { makeSelectHandleState } from '@/shared/libs/selectors';
 import {
   transformOptions,
@@ -19,7 +19,7 @@ export const {
 
 export const queryState = makeSelectHandleState<Product.MakeSelectQuery>(all);
 
-export const getById = (id: EntityId) =>
+export const getByIdWithCalc = (id: EntityId) =>
   createSelector(getEntities, items => {
     const { price: defaultPrice, image, title, options } = items[id]!;
 

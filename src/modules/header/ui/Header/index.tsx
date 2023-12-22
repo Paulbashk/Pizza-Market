@@ -12,18 +12,15 @@ import * as S from './styled';
 
 interface HeaderProps {
   categories: ICategory[];
-  categoryId: number;
   logo: ILogo;
 }
 
-export const Header = ({ categoryId, categories, logo }: HeaderProps) => (
+export const Header = ({ categories, logo }: HeaderProps) => (
   <S.Header>
     <Container>
       <S.WrapperHeader>
         <Logo logo={logo} />
-        {categories.length > 0 && (
-          <CategoriesMenu categoryId={categoryId} categories={categories} />
-        )}
+        {categories.length > 0 && <CategoriesMenu categories={categories} />}
         <HeaderBasket />
       </S.WrapperHeader>
     </Container>

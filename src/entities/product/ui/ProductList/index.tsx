@@ -1,18 +1,18 @@
 import { memo } from 'react';
-import { EntityId } from '@reduxjs/toolkit';
+import { type EntityId } from '@reduxjs/toolkit';
 
 // components
-import {
-  ProductCard,
-  type ProductCardRenderButton,
-} from '@/entities/product/ui/ProductCard';
+import { ProductCard } from '@/entities/product/ui/ProductCard';
+
+// types
+import type { Product } from '@/entities/product/model/types';
 
 // assets
 import * as S from './styled';
 
 interface ProductListProps {
   ids: EntityId[];
-  renderButton?: ProductCardRenderButton;
+  renderButton?: Product.RenderButton;
 }
 
 const ProductCardMemo = memo(ProductCard);

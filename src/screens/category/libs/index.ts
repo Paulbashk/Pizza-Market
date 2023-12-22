@@ -1,1 +1,0 @@
-export { getCategoryIdBySlug } from './getCategoryIdBySlug';

@@ -1,7 +1,7 @@
 'use client';
 
-// components
-import { useProductsTitle } from '@/features/product/byFiltered';
+// hooks
+import { useProductsTitle } from '@/features/product/byFiltered/libs/hooks';
 
 // assets
 import * as S from './styled';
@@ -13,5 +13,5 @@ interface ProductCardsTitleProps {
 export const ProductCardsTitle = ({ categoryName }: ProductCardsTitleProps) => {
   const title = useProductsTitle(categoryName);
 
-  return <S.Wrapper>{title}</S.Wrapper>;
+  return <S.Title>{title}</S.Title>;
 };

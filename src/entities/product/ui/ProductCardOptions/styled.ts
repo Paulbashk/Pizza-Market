@@ -14,6 +14,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   row-gap: 8px;
   margin-bottom: 16px;
+  margin-top: auto;
 `;
 
 export const RadioGroupOptions = styled(RadioGroup)`

@@ -9,6 +9,7 @@ const colors = {
   dark: '#292729',
   white: '#fff',
   black: '#000',
+  orange: '#FE5F1E',
 };
 
 const breakpoints = {

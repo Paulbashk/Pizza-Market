@@ -5,14 +5,14 @@ import { persistReducer } from 'redux-persist';
 import { productFilterModel } from '@/features/product/byFiltered';
 import { productModel } from '@/entities/product';
 import { tagModel } from '@/entities/tag';
-import { basketModel } from '@/features/product/addBasket';
+import { productBasketModel } from '@/entities/product-basket';
 import { storage } from './storage';
 
 const rootReducer = combineReducers({
   products: productModel.reducer,
   tags: tagModel.reducer,
   filter: productFilterModel.reducer,
-  basket: basketModel.reducer,
+  basket: productBasketModel.reducer,
 });
 
 const rootPersistConfig = {

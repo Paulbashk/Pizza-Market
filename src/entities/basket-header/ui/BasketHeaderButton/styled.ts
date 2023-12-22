@@ -46,5 +46,6 @@ export const Title = styled.span`
 
 export const Price = styled.span`
   font-weight: 600;
+  white-space: nowrap;
   ${basketSpan}
 `;

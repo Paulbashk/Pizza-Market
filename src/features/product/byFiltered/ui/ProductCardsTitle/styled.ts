@@ -1,11 +1,8 @@
 'use client';
 
 import styled from 'styled-components';
+import { CreatedTitle } from '@/shared/ui';
 
-export const Wrapper = styled.h1`
-  margin-top: 0;
-  font-size: 32px;
-  line-height: 40px;
-  font-weight: 700;
+export const Title = styled(CreatedTitle('h2'))`
   margin-bottom: 32px;
 `;

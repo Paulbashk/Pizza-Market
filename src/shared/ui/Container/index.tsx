@@ -5,8 +5,15 @@ interface ContainerProps extends ComponentPropsWithoutRef<'div'> {
   children: ReactNode;
 }
 
-export const Container = ({ children, ...otherProps }: ContainerProps) => (
-  <S.Container {...otherProps}>
-    <S.Row>{children}</S.Row>
+export const Container = ({
+  children,
+  className,
+  ...otherProps
+}: ContainerProps) => (
+  <S.Container
+    className={className ? ['container', className].join(' ') : 'container'}
+    {...otherProps}
+  >
+    <S.Row className="row">{children}</S.Row>
   </S.Container>
 );

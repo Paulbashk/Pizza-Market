@@ -1,33 +1,26 @@
-import { type EntityId } from '@reduxjs/toolkit';
-
-// hooks
-import { useRenderButton } from '@/entities/product/libs/hooks';
-
 // types
-import type {
-  ProductCardRenderButton,
-  ProductCardState,
-} from '@/entities/product/ui/ProductCard/types';
+import type { Product } from '@/entities/product/model/types';
 
 // assets
 import * as S from './styled';
 
-interface ProductCardFooterProps {
-  id: EntityId;
-  product: ProductCardState;
-  renderButton?: ProductCardRenderButton;
+interface ProductCardFooterProps extends Product.RenderButtonProps {
+  renderButton?: Product.RenderButton;
 }
 
 export function ProductCardFooter({
   id,
-  product,
+  price,
   renderButton,
+  ...otherProps
 }: ProductCardFooterProps) {
-  const Button = useRenderButton({ id, product, renderButton });
+  const Button = renderButton
+    ? renderButton({ id, price, ...otherProps })
+    : null;
 
   return (
     <S.Footer>
-      <S.Price>{product.total} ₽</S.Price>
+      <S.Price>{price.total} ₽</S.Price>
       {Button}
     </S.Footer>
   );

@@ -3,9 +3,9 @@
   "editor.formatOnPaste": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.format": true,
-    "source.fixAll": true
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.format": "explicit",
+    "source.fixAll": "explicit"
   },
   "eslint.validate": ["typescript", "javascript"]
 }

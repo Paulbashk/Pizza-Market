@@ -1,6 +1,6 @@
 'use client';
 
-import { ComponentType } from 'react';
+import type { ComponentType } from 'react';
 
 // hooks
 import { useQueryProductList } from '@/entities/product/libs/hooks';

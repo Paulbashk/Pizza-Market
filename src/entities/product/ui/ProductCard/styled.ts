@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { CreatedTitle } from '@/shared/ui';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -12,11 +13,8 @@ export const Content = styled.div`
   align-items: center;
 `;
 
-export const Title = styled.h3`
-  margin-top: 0;
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 700;
+export const Title = styled(CreatedTitle('h3'))`
+  text-align: center;
   color: ${props => props.theme.colors.black};
   margin-bottom: 16px;
 `;
