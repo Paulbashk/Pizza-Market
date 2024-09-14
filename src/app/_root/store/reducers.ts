@@ -2,7 +2,7 @@ import { combineReducers } from '@reduxjs/toolkit';
 import { persistReducer } from 'redux-persist';
 
 // models
-import { productFilterModel } from '@/features/product/byFiltered';
+import { productFilterModel } from '@/features/product/sortBy';
 import { productModel } from '@/entities/product';
 import { tagModel } from '@/entities/tag';
 import { productBasketModel } from '@/entities/product-basket';

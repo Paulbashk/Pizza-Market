@@ -15,6 +15,19 @@ export const Wrapper = styled.div`
   row-gap: 8px;
   margin-bottom: 16px;
   margin-top: auto;
+
+  @media (max-width: ${props => props.theme.breakpoints.XL}px) {
+    margin-bottom: 12px;
+  }
+
+  @media (max-width: ${props => props.theme.breakpoints.LG}px) {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  @media (max-width: ${props => props.theme.breakpoints.SM}px) {
+    margin-bottom: 8px;
+  }
 `;
 
 export const RadioGroupOptions = styled(RadioGroup)`
@@ -29,8 +42,21 @@ export const RadioOption = styled(RadioButton)<RadioButtonStyles>`
   ${props =>
     props.$isSize &&
     css`
-      ~ label {
+      label {
         padding: 6px 12px;
       }
     `}
+
+  @media (max-width: ${props => props.theme.breakpoints.XL}px) {
+    label {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    label {
+      padding: 4px 8px;
+    }
+  }
 `;

@@ -1,5 +1,5 @@
-import { type Product } from '@/entities/product/model/types';
 import { getActiveOptionId } from './getActiveOptionId';
+import { type Product } from '../../model/types';
 
 export const transformOptions = (
   options: Product.Options[],

@@ -1,9 +1,9 @@
 import { createSelector } from '@reduxjs/toolkit';
 import { type AppState } from '@/app/_root/store';
-import type { QueryState } from '@/shared/libs/types';
+import type { TQueryState } from '../../types';
 
 export const makeSelectHandleState = <ReturnState>(
-  all: (state: AppState) => ReturnState & QueryState,
+  all: (state: AppState) => ReturnState & TQueryState,
 ) => {
   const isLoading = (state: AppState) => all(state).isLoading;
   const isError = (state: AppState) => all(state).isError;

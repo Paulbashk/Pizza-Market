@@ -1,27 +1,25 @@
 // types
-import type { Product } from '@/entities/product/model/types';
+import type { Product } from '../../model/types';
 
 // assets
 import * as S from './styled';
 
-interface ProductCardFooterProps extends Product.RenderButtonProps {
+interface IProductCardFooterProps extends Product.RenderButtonProps {
   renderButton?: Product.RenderButton;
+  sale: Product.Sale;
 }
 
 export function ProductCardFooter({
-  id,
-  price,
   renderButton,
+  price,
+  sale,
   ...otherProps
-}: ProductCardFooterProps) {
-  const Button = renderButton
-    ? renderButton({ id, price, ...otherProps })
-    : null;
-
+}: IProductCardFooterProps) {
   return (
     <S.Footer>
-      <S.Price>{price.total} ₽</S.Price>
-      {Button}
+      <S.Price $isSale={sale !== null}>{price.total.count} ₽</S.Price>
+      {sale && <S.PriceSale>{price.total.saleCount} ₽</S.PriceSale>}
+      {renderButton && renderButton({ price, ...otherProps })}
     </S.Footer>
   );
 }

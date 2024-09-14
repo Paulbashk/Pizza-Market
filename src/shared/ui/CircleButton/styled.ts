@@ -22,6 +22,12 @@ export const CircleButton = styled.button<CircleButtonStyles>`
   transition-duration: 0.3s;
   transition-timing-function: ease;
 
+  @media (max-width: ${props => props.theme.breakpoints.MD}px) {
+    width: 26px;
+    height: 26px;
+    padding: 3px;
+  }
+
   &:hover {
     cursor: pointer;
   }

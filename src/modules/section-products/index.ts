@@ -1,0 +1,1 @@
+export { SectionProducts } from './ui';

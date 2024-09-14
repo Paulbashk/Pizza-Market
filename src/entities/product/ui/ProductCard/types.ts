@@ -1,9 +1,10 @@
 import { type EntityId } from '@reduxjs/toolkit';
-import type { Product } from '@/entities/product/model/types';
+import type { Product } from '../../model/types';
 
-export interface ProductCardProps {
+export interface IProductCardProps {
   id: EntityId;
+  sale: Product.Sale;
   renderButton?: Product.RenderButton;
 }
 
-export interface ProductCardState extends Product.Price {}
+export interface IProductCardState extends Product.Price {}

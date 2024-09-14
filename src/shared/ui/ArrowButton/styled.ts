@@ -21,6 +21,20 @@ export const Button = styled.button`
   z-index: 100;
   transition: opacity 0.3s ease;
 
+  @media (max-width: ${props => props.theme.breakpoints.MD}px) {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+  }
+
+  @media (max-width: ${props => props.theme.breakpoints.SM}px) {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+  }
+
   &:hover {
     cursor: pointer;
     opacity: 0.7;
@@ -35,5 +49,19 @@ export const Button = styled.button`
     position: relative;
     top: -1px;
     color: ${props => props.theme.colors.white};
+
+    @media (max-width: ${props => props.theme.breakpoints.MD}px) {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      min-height: 32px;
+    }
+
+    @media (max-width: ${props => props.theme.breakpoints.SM}px) {
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      min-height: 28px;
+    }
   }
 `;

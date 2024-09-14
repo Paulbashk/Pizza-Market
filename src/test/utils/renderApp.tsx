@@ -6,11 +6,11 @@ import {
   type AppStore,
   persistedReducer,
 } from '@/app/_root/store';
-import { RenderOptions, render } from '@testing-library/react';
-import { PreloadedState, configureStore } from '@reduxjs/toolkit';
+import { type RenderOptions, render } from '@testing-library/react';
+import { type PreloadedState, configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 
-interface ExtendedRenderOptions extends Omit<RenderOptions, 'queries'> {
+interface IExtendedRenderOptions extends Omit<RenderOptions, 'queries'> {
   reducer?: typeof persistedReducer;
   preloadedState?: PreloadedState<AppState>;
   store?: AppStore;
@@ -23,7 +23,7 @@ const renderApp = (
     preloadedState = {},
     store = configureStore({ reducer, preloadedState }),
     ...renderOptions
-  }: ExtendedRenderOptions = {},
+  }: IExtendedRenderOptions = {},
 ) => {
   function Wrapper({ children }: { children: React.ReactElement }) {
     return (

@@ -9,3 +9,7 @@ export { reduceSumByKey } from './reduceSumByKey';
 export { objectComparsion } from './objectComparsion';
 export { findIndexByKeyObject } from './findIndexByKeyObject';
 export { findByKeyObject } from './findByKeyObject';
+
+export { formatCount } from './formatCount';
+
+export { saveToCookie } from './cookie';

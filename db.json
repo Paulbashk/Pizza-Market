@@ -4,6 +4,26 @@
     "name": "SUPER PIZZA",
     "subdesc": "очень вкусная пицца"
   },
+  "menu": [
+    {
+      "name": "Пиццы",
+      "href": "/"
+    },
+    {
+      "name": "Напитки",
+      "href": "/drink"
+    },
+    {
+      "name": "Закуски",
+      "href": "/snacks"
+    }
+  ],
+  "pages": [
+    {
+      "id": "policy",
+      "content": "<h1>Политика конфиденциальности и условия обработки персональных данных</h1><h2>Политика конфиденциальности</h2><p>Настоящий документ «Политика конфиденциальности» (далее по тексту – «Политика») представляет собой правила использования «SUPPERPIZZA» (далее – «мы» и/или «Администрация») данных интернет-пользователей (далее «вы» и/или «Пользователь»), собираемых с использованием сайта<a href='/'>supper-pizza</a>(далее – «Сайт»).</p><h3>1. Обрабатываемые данные</h3><p>1.1. Мы не осуществляем сбор ваших персональных данных с использованием Сайта.</p><p>1.2. Все данные, собираемые на Сайте, предоставляются и принимаются в обезличенной форме (далее – «Обезличенные данные»).</p><p>1.3. Обезличенные данные включают следующие сведения, которые не позволяют вас идентифицировать:</p><p>1.3.1. Информацию, которую вы предоставляете о себе самостоятельно с использованием онлайн-форм и программных модулей Сайта, включая имя и номер телефона и/или адрес электронной почты.</p><p>1.3.2. Данные, которые передаются в обезличенном виде в автоматическом режиме в зависимости от настроек используемого вами программного обеспечения.</p><p>1.4. Администрация вправе устанавливать требования к составу Обезличенных данных Пользователя, которые собираются использованием Сайта.</p><p>1.5. Если определенная информация не помечена как обязательная, ее предоставление или раскрытие осуществляется Пользователем на свое усмотрение. Одновременно вы даете информированное согласие на доступ неограниченного круга лиц к таким данным. Указанные данные становится общедоступными с момента предоставления и/или раскрытия в иной форме.</p><p>1.6. Администрация не осуществляет проверку достоверности предоставляемых данных и наличия у Пользователя необходимого согласия на их обработку в соответствии с настоящей Политикой, полагая, что Пользователь действует добросовестно, осмотрительно и прилагает все необходимые усилия к поддержанию такой информации в актуальном состоянии и получению всех необходимых согласий на ее использование.</p><p>1.7. Вы осознаете и принимаете возможность использования на Сайте программного обеспечения третьих лиц, в результате чего такие лица могут получать и передавать указанные в п.1.3 данные в обезличенном виде.</p><p><strong>Пример!</strong>К указанному программному обеспечению третьих лиц относятся системы сбора статистики посещений Google Analytics и Яндекс.Метрика.</p><p>1.8. Состав и условия сбора обезличенных данных с использованием программного обеспечения третьих лиц определяются непосредственно их правообладателями и могут включать:</p><ul><li>данные браузера (тип, версия, cookie);</li><li>данные устройства и место его положения;</li><li>данные операционной системы (тип, версия, разрешение экрана);</li><li>данные запроса (время, источник перехода, IP-адрес).</li></ul><p>1.9. Администрация не несет ответственность за порядок использования Обезличенных данных Пользователя третьими лицами.</p><h3>2. Цели обработки данных</h3><p>2.1. Администрация использует данные в следующих целях:</p><p>2.1.1. Обработка поступающих запросов и связи с Пользователем;</p><p>2.1.2. Информационное обслуживание, включая рассылку рекламно-информационных материалов;</p><p>2.1.3. Проведение маркетинговых, статистических и иных исследований;</p><p>2.1.4. Таргетирование рекламных материалов на Сайте.</p><h3>3. Требования к защите данных</h3><p>3.1. Администрация осуществляет хранение данных и обеспечивает их охрану от несанкционированного доступа и распространения в соответствии с внутренними правилами и регламентами.</p><p>3.2. В отношении полученных данных сохраняется конфиденциальность, за исключением случаев, когда они сделаны Пользователем общедоступными, а также когда используемые на Сайте технологии и программное обеспечение третьих лиц либо настройки используемого Пользователем программного обеспечения предусматривают открытый обмен с данными лицами и/или иными участниками и пользователями сети Интернет.</p><p>3.3. В целях повышения качества работы Администрация вправе хранить лог-файлы о действиях, совершенных Пользователем в рамках использования Сайта в течение 1 (Одного) года.</p><h3>4. Передача данных</h3><p>4.1. Администрация вправе передать данные третьим лицам в следующих случаях:</p><ul><li>Пользователь выразил свое согласие на такие действия, включая случаи применения Пользователем настроек используемого программного обеспечения, не ограничивающих предоставление определенной информации;</li><li>Передача необходима в рамках использования Пользователем функциональных возможностей Сайта;</li><li>Передача требуется в соответствии с целями обработки данных;</li><li>В связи с передачей Сайта во владение, пользование или собственность такого третьего лица;</li><li>По запросу суда или иного уполномоченного государственного органа в рамках установленной законодательством процедуры;</li><li>Для защиты прав и законных интересов Администрации в связи с допущенными Пользователем нарушениями.</li></ul><h3>5. Изменение Политики конфиденциальности</h3><p>5.1. Настоящая Политика может быть изменена или прекращена Администрацией в одностороннем порядке без предварительного уведомления Пользователя. Новая редакция Политики вступает в силу с момента ее размещения на Сайте, если иное не предусмотрено новой редакцией Политики.</p><p>5.2. Действующая редакция Политики находится на Сайте в сети Интернет по адресу<a href='/policy/'>supper-pizza/policy/</a>.</p>"
+    }
+  ],
   "banners": [
     {
       "id": 0,
@@ -559,6 +579,1657 @@
       "title": "Салат цезарь",
       "price": 225,
       "image": "/products/cezar.webp"
+    }
+  ],
+  "promocode": [
+    {
+      "id": 0,
+      "sale": 40,
+      "block_price": 3999,
+      "code": "promo3999"
+    },
+    {
+      "id": 1,
+      "sale": 25,
+      "block_price": 999,
+      "code": "promo999"
+    }
+  ],
+  "orders": [
+    {
+      "client": {
+        "name": "77",
+        "phone": "777777777777777777",
+        "city": "666",
+        "street": "777",
+        "house": "3",
+        "houseBody": "",
+        "entrance": "5",
+        "floor": "",
+        "apartment": "4",
+        "intercom": "",
+        "comment": "yt",
+        "paymentType": "Наличными курьеру",
+        "terms": true
+      },
+      "items": [
+        {
+          "id": "j20-5hm2RBtOjSm3kb5Ti",
+          "productId": 11,
+          "title": "Вода без газов",
+          "image": "/products/aqua.webp",
+          "total": 50,
+          "totalQuantity": 100,
+          "options": {
+            "size": {
+              "label": "0.5л",
+              "price": 0
+            }
+          },
+          "quantity": 2
+        }
+      ],
+      "price": {
+        "count": 100,
+        "oldCount": 0,
+        "sale": null,
+        "promocode": null
+      },
+      "countItems": 1,
+      "id": 1
+    },
+    {
+      "client": {
+        "name": "77",
+        "phone": "777777777777777777",
+        "city": "666",
+        "street": "777",
+        "house": "3",
+        "houseBody": "",
+        "entrance": "5",
+        "floor": "",
+        "apartment": "4",
+        "intercom": "",
+        "comment": "yt",
+        "paymentType": "Наличными курьеру",
+        "terms": true
+      },
+      "items": [
+        {
+          "id": "j20-5hm2RBtOjSm3kb5Ti",
+          "productId": 11,
+          "title": "Вода без газов",
+          "image": "/products/aqua.webp",
+          "total": 50,
+          "totalQuantity": 100,
+          "options": {
+            "size": {
+              "label": "0.5л",
+              "price": 0
+            }
+          },
+          "quantity": 2
+        }
+      ],
+      "price": {
+        "count": 100,
+        "oldCount": 0,
+        "sale": null,
+        "promocode": null
+      },
+      "countItems": 1,
+      "id": 2
+    },
+    {
+      "client": {
+        "name": "y",
+        "phone": "777777777777777777",
+        "city": "y",
+        "street": "7",
+        "house": "y",
+        "houseBody": "",
+        "entrance": "y",
+        "floor": "",
+        "apartment": "y",
+        "intercom": "",
+        "comment": "yyy",
+        "paymentType": "Картой курьеру",
+        "terms": true
+      },
+      "items": [
+        {
+          "id": "j20-5hm2RBtOjSm3kb5Ti",
+          "productId": 11,
+          "title": "Вода без газов",
+          "image": "/products/aqua.webp",
+          "total": 50,
+          "totalQuantity": 100,
+          "options": {
+            "size": {
+              "label": "0.5л",
+              "price": 0
+            }
+          },
+          "quantity": 2
+        }
+      ],
+      "price": {
+        "count": 100,
+        "oldCount": 0,
+        "sale": null,
+        "promocode": null
+      },
+      "countItems": 1,
+      "id": 3
+    },
+    {
+      "client": {
+        "name": "Павел",
+        "phone": "+7 (950) 270-33-01",
+        "city": "Москва",
+        "street": "ул. Пушкина",
+        "house": "134",
+        "houseBody": "5",
+        "entrance": "3",
+        "floor": "1",
+        "apartment": "2",
+        "intercom": "333",
+        "comment": "Заберет ребенок",
+        "paymentType": "Картой курьеру",
+        "terms": true
+      },
+      "items": [
+        {
+          "id": "ENtl73XaQknVnvO1rxkBG",
+          "productId": 11,
+          "title": "Вода без газов",
+          "image": "/products/aqua.webp",
+          "total": 50,
+          "totalQuantity": 100,
+          "options": {
+            "size": {
+              "label": "0.5л",
+              "price": 0
+            }
+          },
+          "quantity": 2
+        },
+        {
+          "id": "2JVioZ6eIrrvYxXQOp5t1",
+          "productId": 9,
+          "title": "Coca cola",
+          "image": "/products/cocacola.webp",
+          "total": 80,
+          "totalQuantity": 80,
+          "options": {
+            "size": {
+              "label": "0.3л",
+              "price": 0
+            }
+          },
+          "quantity": 1
+        },
+        {
+          "id": "spvC8tiYnQYyGsqftbXMA",
+          "productId": 10,
+          "title": "Чай",
+          "image": "/products/tea.webp",
+          "total": 50,
+          "totalQuantity": 50,
+          "options": {
+            "size": {
+              "label": "0.3л",
+              "price": 0
+            }
+          },
+          "quantity": 1
+        },
+        {
+          "id": "mTduRiiONQJvjD5Bjm5ai",
+          "productId": 10,
+          "title": "Чай",
+          "image": "/products/tea.webp",
+          "total": 60,
+          "totalQuantity": 60,
+          "options": {
+            "size": {
+              "label": "0.5л",
+              "price": 10
+            }
+          },
+          "quantity": 1
+        }
+      ],
+      "price": {
+        "count": 290,
+        "oldCount": 0,
+        "sale": null,
+        "promocode": null
+      },
+      "countItems": 4,
+      "id": 4
+    },
+    {
+      "client": {
+        "name": "PalBush",
+        "phone": "+38 (676) 776-76-67",
+        "city": "Кемерово",
+        "street": "7887",
+        "house": "78",
+        "houseBody": "",
+        "entrance": "78",
+        "floor": "",
+        "apartment": "7",
+        "intercom": "",
+        "comment": "роорор",
+        "paymentType": "Картой курьеру",
+        "terms": true
+      },
+      "items": [
+        {
+          "id": "1aFY6ZJhRzelFO5e6gt1T",
+          "productId": 10,
+          "title": "Чай",
+          "image": "/products/tea.webp",
+          "total": 60,
+          "totalQuantity": 120,
+          "options": {
+            "size": {
+              "label": "0.5л",
+              "price": 10
+            }
+          },
+          "quantity": 2
+        },
+        {
+          "id": "6zSLfGUxXv7hB7vs8-soQ",
+          "productId": 9,
+          "title": "Coca cola",
+          "image": "/products/cocacola.webp",
+          "total": 130,
+          "totalQuantity": 390,
+          "options": {
+            "size": {
+              "label": "1л",
+              "price": 50
+            }
+          },
+          "quantity": 3
+        }
+      ],
+      "price": {
+        "count": 510,
+        "oldCount": 0,
+        "sale": null,
+        "promocode": null
+      },
+      "countItems": 2,
+      "id": 5
+    },
+    {
+      "client": {
+        "name": "ро",
+        "phone": "+7(___)___-__-__орр",
+        "city": "ро",
+        "street": "роро",
+        "house": "ро",
+        "houseBody": "",
+        "entrance": "ро",
+        "floor": "",
+        "apartment": "роро",
+        "intercom": "",
+        "comment": "рор",
+        "paymentType": "Картой курьеру",
+        "terms": true
+      },
+      "items": [
+        {
+          "id": "Ia7Egazt5d-6yuz7OZa-r",
+          "productId": 6,
+          "title": "Маргарита",
+          "image": "/products/pizza-margarita.webp",
+          "total": 570,
+          "totalQuantity": 1140,
+          "options": {
+            "type": {
+              "label": "традиционное",
+              "price": 50
+            },
+            "size": {
+              "label": "40 см.",
+              "price": 155
+            }
+          },
+          "quantity": 2
+        },
+        {
+          "id": "YDYj4MUxS-6UJkUwVyrdP",
+          "productId": 5,
+          "title": "4 сезона",
+          "image": "/products/pizza-4sezon.webp",
+          "total": 460,
+          "totalQuantity": 920,
+          "options": {
+            "type": {
+              "label": "тонкое",
+              "price": 25
+            },
+            "size": {
+              "label": "26 см.",
+              "price": 25
+            }
+          },
+          "quantity": 2
+        }
+      ],
+      "price": {
+        "count": 2060,
+        "oldCount": 0,
+        "sale": null,
+        "promocode": null
+      },
+      "countItems": 2,
+      "id": 6
+    },
+    {
+      "client": {
+        "name": "PalBush",
+        "phone": "+7 (950) 270-33-01",
+        "city": "Кемерово",
+        "street": "рп",
+        "house": "пр",
+        "houseBody": "",
+        "entrance": "пр",
+        "floor": "",
+        "apartment": "пр",
+        "intercom": "",
+        "comment": "прпр",
+        "paymentType": "Картой курьеру",
+        "terms": true
+      },
+      "items": [
+        {
+          "id": "YU1fJ0bN6-1QVY58CiwC-",
+          "productId": 6,
+          "title": "Маргарита",
+          "image": "/products/pizza-margarita.webp",
+          "total": 570,
+          "totalQuantity": 570,
+          "options": {
+            "type": {
+              "label": "традиционное",
+              "price": 50
+            },
+            "size": {
+              "label": "40 см.",
+              "price": 155
+            }
+          },
+          "quantity": 1
+        },
+        {
+          "id": "POLBPsjjUwEuoUssUAh-K",
+          "productId": 6,
+          "title": "Маргарита",
+          "image": "/products/pizza-margarita.webp",
+          "total": 515,
+          "totalQuantity": 515,
+          "options": {
+            "type": {
+              "label": "традиционное",
+              "price": 50
+            },
+            "size": {
+              "label": "30 см.",
+              "price": 100
+            }
+          },
+          "quantity": 1
+        }
+      ],
+      "price": {
+        "count": 1085,
+        "oldCount": 0,
+        "sale": null,
+        "promocode": null
+      },
+      "countItems": 2,
+      "id": 7
+    },
+    {
+      "client": {
+        "name": "PalBush",
+        "phone": "+38 (676) 776-76-67",
+        "city": "Кемерово",
+        "street": "ghgh",
+        "house": "g",
+        "houseBody": "",
+        "entrance": "g",
+        "floor": "",
+        "apartment": "g",
+        "intercom": "",
+        "comment": "ghgh",
+        "paymentType": "Картой курьеру",
+        "terms": true
+      },
+      "items": [
+        {
+          "id": "I-fAKl9XJLZJHJKx1zseg",
+          "productId": 10,
+          "title": "Чай",
+          "image": "/products/tea.webp",
+          "total": 50,
+          "totalQuantity": 50,
+          "options": {
+            "size": {
+              "label": "0.3л",
+              "price": 0
+            }
+          },
+          "quantity": 1
+        },
+        {
+          "id": "STqhh8J7-ieyFDHyurN4I",
+          "productId": 11,
+          "title": "Вода без газов",
+          "image": "/products/aqua.webp",
+          "total": 50,
+          "totalQuantity": 50,
+          "options": {
+            "size": {
+              "label": "0.5л",
+              "price": 0
+            }
+          },
+          "quantity": 1
+        },
+        {
+          "id": "OK1Afa4_LfoViRhMotcz7",
+          "productId": 11,
+          "title": "Вода без газов",
+          "image": "/products/aqua.webp",
+          "total": 75,
+          "totalQuantity": 75,
+          "options": {
+            "size": {
+              "label": "1л",
+              "price": 25
+            }
+          },
+          "quantity": 1
+        }
+      ],
+      "price": {
+        "count": 175,
+        "oldCount": 0,
+        "sale": null,
+        "promocode": null
+      },
+      "countItems": 3,
+      "id": 8
+    },
+    {
+      "client": {
+        "name": "hj",
+        "phone": "+7(565)656-56-5678",
+        "city": "hj",
+        "street": "hjh",
+        "house": "hj",
+        "houseBody": "",
+        "entrance": "hj",
+        "floor": "",
+        "apartment": "h",
+        "intercom": "",
+        "comment": "hjhj",
+        "paymentType": "Картой курьеру",
+        "terms": true
+      },
+      "items": [
+        {
+          "id": "4Q6pZ_nbzilI1cN3P7OcU",
+          "productId": 10,
+          "title": "Чай",
+          "image": "/products/tea.webp",
+          "total": 50,
+          "totalQuantity": 50,
+          "options": {
+            "size": {
+              "label": "0.3л",
+              "price": 0
+            }
+          },
+          "quantity": 1
+        },
+        {
+          "id": "q-6kW3Z1GdqZxHy10GLgd",
+          "productId": 10,
+          "title": "Чай",
+          "image": "/products/tea.webp",
+          "total": 60,
+          "totalQuantity": 60,
+          "options": {
+            "size": {
+              "label": "0.5л",
+              "price": 10
+            }
+          },
+          "quantity": 1
+        }
+      ],
+      "price": {
+        "count": 110,
+        "oldCount": 0,
+        "sale": null,
+        "promocode": null
+      },
+      "countItems": 2,
+      "id": 9
+    },
+    {
+      "client": {
+        "name": "ghgh",
+        "phone": "+7 (950) 270-33-01yy",
+        "city": "ghgh",
+        "street": "ghghhg",
+        "house": "gh",
+        "houseBody": "",
+        "entrance": "gh",
+        "floor": "",
+        "apartment": "ghg",
+        "intercom": "",
+        "comment": "ghgh",
+        "paymentType": "Картой курьеру",
+        "terms": true
+      },
+      "items": [
+        {
+          "id": "LKq-C8ncoQjRhVAMEf-3W",
+          "productId": 6,
+          "title": "Маргарита",
+          "image": "/products/pizza-margarita.webp",
+          "total": 440,
+          "totalQuantity": 440,
+          "options": {
+            "type": {
+              "label": "традиционное",
+              "price": 50
+            },
+            "size": {
+              "label": "26 см.",
+              "price": 25
+            }
+          },
+          "quantity": 1
+        },
+        {
+          "id": "CHpoQF_6T-pjUM-toY3QI",
+          "productId": 6,
+          "title": "Маргарита",
+          "image": "/products/pizza-margarita.webp",
+          "total": 415,
+          "totalQuantity": 415,
+          "options": {
+            "type": {
+              "label": "тонкое",
+              "price": 25
+            },
+            "size": {
+              "label": "26 см.",
+              "price": 25
+            }
+          },
+          "quantity": 1
+        },
+        {
+          "id": "oVjPDUQ15CcLvNjvS5Rfo",
+          "productId": 10,
+          "title": "Чай",
+          "image": "/products/tea.webp",
+          "total": 50,
+          "totalQuantity": 50,
+          "options": {
+            "size": {
+              "label": "0.3л",
+              "price": 0
+            }
+          },
+          "quantity": 1
+        },
+        {
+          "id": "5GaDdRFmSuXEUivTnrPok",
+          "productId": 10,
+          "title": "Чай",
+          "image": "/products/tea.webp",
+          "total": 60,
+          "totalQuantity": 60,
+          "options": {
+            "size": {
+              "label": "0.5л",
+              "price": 10
+            }
+          },
+          "quantity": 1
+        },
+        {
+          "id": "l-qXwUCUn79Yy0Mg8bG_b",
+          "productId": 5,
+          "title": "4 сезона",
+          "image": "/products/pizza-4sezon.webp",
+          "total": 665,
+          "totalQuantity": 665,
+          "options": {
+            "type": {
+              "label": "традиционное",
+              "price": 50
+            },
+            "size": {
+              "label": "40 см.",
+              "price": 155
+            }
+          },
+          "quantity": 1
+        },
+        {
+          "id": "oJ516jsVttlSSxbum7ps2",
+          "productId": 6,
+          "title": "Маргарита",
+          "image": "/products/pizza-margarita.webp",
+          "total": 570,
+          "totalQuantity": 570,
+          "options": {
+            "type": {
+              "label": "традиционное",
+              "price": 50
+            },
+            "size": {
+              "label": "40 см.",
+              "price": 155
+            }
+          },
+          "quantity": 1
+        }
+      ],
+      "price": {
+        "count": 2200,
+        "oldCount": 0,
+        "sale": null,
+        "promocode": null
+      },
+      "countItems": 6,
+      "id": 10
+    },
+    {
+      "client": {
+        "name": "hgghgh",
+        "phone": "6767676767676766767",
+        "city": "ghgh",
+        "street": "fg",
+        "house": "ghgh",
+        "houseBody": "",
+        "entrance": "ghgh",
+        "floor": "",
+        "apartment": "ghgh",
+        "intercom": "",
+        "comment": "",
+        "paymentType": "Наличными курьеру",
+        "terms": true
+      },
+      "items": [
+        {
+          "id": "mGQC0Sergfdm5rOAfjrcz",
+          "productId": 6,
+          "title": "Маргарита",
+          "image": "/products/pizza-margarita.webp",
+          "total": 365,
+          "totalQuantity": 730,
+          "options": {
+            "type": {
+              "label": "тонкое",
+              "price": 25
+            },
+            "size": {
+              "label": "26 см.",
+              "price": 25
+            }
+          },
+          "quantity": 2
+        }
+      ],
+      "price": {
+        "count": 730,
+        "oldCount": 0,
+        "sale": null,
+        "promocode": null
+      },
+      "countItems": 1,
+      "id": 11
+    },
+    {
+      "client": {
+        "name": "ghg",
+        "phone": "787878787878787878",
+        "city": "ghg",
+        "street": "ghgh",
+        "house": "ghgh",
+        "houseBody": "",
+        "entrance": "ghg",
+        "floor": "",
+        "apartment": "ghh",
+        "intercom": "",
+        "comment": "ghgh",
+        "paymentType": "Картой курьеру",
+        "terms": true
+      },
+      "items": [
+        {
+          "id": "1r9wX7ftuLxFaaVtlAh6q",
+          "productId": 5,
+          "title": "4 сезона",
+          "image": "/products/pizza-4sezon.webp",
+          "total": 665,
+          "totalQuantity": 1330,
+          "options": {
+            "type": {
+              "label": "традиционное",
+              "price": 50
+            },
+            "size": {
+              "label": "40 см.",
+              "price": 155
+            }
+          },
+          "quantity": 2
+        }
+      ],
+      "price": {
+        "count": 1330,
+        "oldCount": 0,
+        "sale": null,
+        "promocode": null
+      },
+      "countItems": 1,
+      "number": "lRFSxCkSdAojnZ8gU2awP",
+      "id": 12
+    },
+    {
+      "client": {
+        "name": "hjhj",
+        "phone": "777777777777777777",
+        "city": "hjh",
+        "street": "jhhj",
+        "house": "hjhj",
+        "houseBody": "h",
+        "entrance": "hjh",
+        "floor": "hj",
+        "apartment": "hjh",
+        "intercom": "hhj",
+        "comment": "hj",
+        "paymentType": "Картой курьеру",
+        "terms": true
+      },
+      "items": [
+        {
+          "id": "HP1GxaJRuiB8THhgMB_tX",
+          "productId": 6,
+          "title": "Маргарита",
+          "image": "/products/pizza-margarita.webp",
+          "total": 365,
+          "totalQuantity": 1095,
+          "options": {
+            "type": {
+              "label": "тонкое",
+              "price": 25
+            },
+            "size": {
+              "label": "26 см.",
+              "price": 25
+            }
+          },
+          "quantity": 3
+        }
+      ],
+      "price": {
+        "count": 1095,
+        "oldCount": 0,
+        "sale": null,
+        "promocode": null
+      },
+      "countItems": 1,
+      "number": "t2SBwxoxZ4",
+      "id": 13
+    },
+    {
+      "client": {
+        "name": "gh",
+        "phone": "7777777777777777777",
+        "city": "gh",
+        "street": "gh",
+        "house": "gh",
+        "houseBody": "gh",
+        "entrance": "gh",
+        "floor": "gh",
+        "apartment": "gh",
+        "intercom": "gh",
+        "comment": "ghgh",
+        "paymentType": "Картой курьеру",
+        "terms": true
+      },
+      "items": [
+        {
+          "id": "BG4CNAwv23dnDeudypI4F",
+          "productId": 6,
+          "title": "Маргарита",
+          "image": "/products/pizza-margarita.webp",
+          "total": 545,
+          "totalQuantity": 2180,
+          "options": {
+            "type": {
+              "label": "тонкое",
+              "price": 25
+            },
+            "size": {
+              "label": "40 см.",
+              "price": 155
+            }
+          },
+          "quantity": 4
+        }
+      ],
+      "price": {
+        "count": 2180,
+        "oldCount": 0,
+        "sale": null,
+        "promocode": null
+      },
+      "countItems": 1,
+      "id": 14
+    },
+    {
+      "client": {
+        "name": "Павел",
+        "phone": "+38 (676) 776-76-6777",
+        "city": "пр",
+        "street": "пр",
+        "house": "пр",
+        "houseBody": "",
+        "entrance": "пр",
+        "floor": "",
+        "apartment": "пр",
+        "intercom": "",
+        "comment": "пр",
+        "paymentType": "Картой курьеру",
+        "terms": true
+      },
+      "items": [
+        {
+          "id": "sBJb0rI4oAWWmAnF0yBTn",
+          "productId": 6,
+          "title": "Маргарита",
+          "image": "/products/pizza-margarita.webp",
+          "total": 365,
+          "totalQuantity": 730,
+          "options": {
+            "type": {
+              "label": "тонкое",
+              "price": 25
+            },
+            "size": {
+              "label": "26 см.",
+              "price": 25
+            }
+          },
+          "quantity": 2
+        }
+      ],
+      "price": {
+        "count": 730,
+        "oldCount": 0,
+        "sale": null,
+        "promocode": null
+      },
+      "countItems": 1,
+      "id": 15
+    },
+    {
+      "client": {
+        "name": "PalBush",
+        "phone": "+38 (676) 776-76-67",
+        "city": "Кемерово",
+        "street": "ул. Пушкина",
+        "house": "HH",
+        "houseBody": "",
+        "entrance": "HH",
+        "floor": "",
+        "apartment": "HH",
+        "intercom": "",
+        "comment": "HHJHJH",
+        "paymentType": "Картой курьеру",
+        "terms": true
+      },
+      "items": [
+        {
+          "id": "JkOO9wjzocVhwKwesciC5",
+          "productId": 5,
+          "title": "4 сезона",
+          "image": "/products/pizza-4sezon.webp",
+          "total": 535,
+          "totalQuantity": 535,
+          "options": {
+            "type": {
+              "label": "традиционное",
+              "price": 50
+            },
+            "size": {
+              "label": "26 см.",
+              "price": 25
+            }
+          },
+          "quantity": 1
+        },
+        {
+          "id": "C64sC66QxI97IYd8_65mP",
+          "productId": 5,
+          "title": "4 сезона",
+          "image": "/products/pizza-4sezon.webp",
+          "total": 665,
+          "totalQuantity": 1330,
+          "options": {
+            "type": {
+              "label": "традиционное",
+              "price": 50
+            },
+            "size": {
+              "label": "40 см.",
+              "price": 155
+            }
+          },
+          "quantity": 2
+        },
+        {
+          "id": "0GzHz4FAInyXDZeFskejA",
+          "productId": 5,
+          "title": "4 сезона",
+          "image": "/products/pizza-4sezon.webp",
+          "total": 610,
+          "totalQuantity": 1220,
+          "options": {
+            "type": {
+              "label": "традиционное",
+              "price": 50
+            },
+            "size": {
+              "label": "30 см.",
+              "price": 100
+            }
+          },
+          "quantity": 2
+        },
+        {
+          "id": "dcwT5kQKUxeFd_aDtBnDh",
+          "productId": 5,
+          "title": "4 сезона",
+          "image": "/products/pizza-4sezon.webp",
+          "total": 585,
+          "totalQuantity": 1170,
+          "options": {
+            "type": {
+              "label": "тонкое",
+              "price": 25
+            },
+            "size": {
+              "label": "30 см.",
+              "price": 100
+            }
+          },
+          "quantity": 2
+        },
+        {
+          "id": "rkeGyRkfFCbCy49lNn_h7",
+          "productId": 5,
+          "title": "4 сезона",
+          "image": "/products/pizza-4sezon.webp",
+          "total": 510,
+          "totalQuantity": 1020,
+          "options": {
+            "type": {
+              "label": "тонкое",
+              "price": 25
+            },
+            "size": {
+              "label": "26 см.",
+              "price": 25
+            }
+          },
+          "quantity": 2
+        }
+      ],
+      "price": {
+        "count": 5275,
+        "oldCount": 0,
+        "sale": null,
+        "promocode": null
+      },
+      "countItems": 5275,
+      "id": 16
+    },
+    {
+      "client": {
+        "name": "PalBush",
+        "phone": "+38 (676) 776-76-67",
+        "city": "Кемерово",
+        "street": "tyt",
+        "house": "tyty",
+        "houseBody": "",
+        "entrance": "ty",
+        "floor": "",
+        "apartment": "tyt",
+        "intercom": "",
+        "comment": "tytyy",
+        "paymentType": "Картой курьеру",
+        "terms": true
+      },
+      "items": [
+        {
+          "id": "2Dy_IXANAnDMY6vvt2tfW",
+          "productId": 6,
+          "title": "Маргарита",
+          "image": "/products/pizza-margarita.webp",
+          "total": 440,
+          "totalQuantity": 880,
+          "options": {
+            "type": {
+              "label": "традиционное",
+              "price": 50
+            },
+            "size": {
+              "label": "26 см.",
+              "price": 25
+            }
+          },
+          "quantity": 2
+        },
+        {
+          "id": "GqQR4VGfc-j11ZQPGMpE3",
+          "productId": 6,
+          "title": "Маргарита",
+          "image": "/products/pizza-margarita.webp",
+          "total": 570,
+          "totalQuantity": 1710,
+          "options": {
+            "type": {
+              "label": "традиционное",
+              "price": 50
+            },
+            "size": {
+              "label": "40 см.",
+              "price": 155
+            }
+          },
+          "quantity": 3
+        },
+        {
+          "id": "nUmqmk38gSw63xo8hvip1",
+          "productId": 6,
+          "title": "Маргарита",
+          "image": "/products/pizza-margarita.webp",
+          "total": 515,
+          "totalQuantity": 515,
+          "options": {
+            "type": {
+              "label": "традиционное",
+              "price": 50
+            },
+            "size": {
+              "label": "30 см.",
+              "price": 100
+            }
+          },
+          "quantity": 1
+        },
+        {
+          "id": "2TsnmwPnDxhx5J8kvHpcU",
+          "productId": 6,
+          "title": "Маргарита",
+          "image": "/products/pizza-margarita.webp",
+          "total": 490,
+          "totalQuantity": 490,
+          "options": {
+            "type": {
+              "label": "тонкое",
+              "price": 25
+            },
+            "size": {
+              "label": "30 см.",
+              "price": 100
+            }
+          },
+          "quantity": 1
+        },
+        {
+          "id": "ZfHFsDT2af85xdNsnZEpA",
+          "productId": 6,
+          "title": "Маргарита",
+          "image": "/products/pizza-margarita.webp",
+          "total": 415,
+          "totalQuantity": 1660,
+          "options": {
+            "type": {
+              "label": "тонкое",
+              "price": 25
+            },
+            "size": {
+              "label": "26 см.",
+              "price": 25
+            }
+          },
+          "quantity": 4
+        }
+      ],
+      "price": {
+        "count": 5255,
+        "oldCount": 0,
+        "sale": null,
+        "promocode": null
+      },
+      "countItems": 5255,
+      "id": 17
+    },
+    {
+      "client": {
+        "name": "ghgh",
+        "phone": "+38 (676) 776-76-67",
+        "city": "ghgh",
+        "street": "ghgh",
+        "house": "ghgh",
+        "houseBody": "",
+        "entrance": "ghgh",
+        "floor": "",
+        "apartment": "ghgh",
+        "intercom": "",
+        "comment": "ghg",
+        "paymentType": "Картой курьеру",
+        "terms": true
+      },
+      "items": [
+        {
+          "id": "gtyES8O1l8p__FfE59-I0",
+          "productId": 6,
+          "title": "Маргарита",
+          "image": "/products/pizza-margarita.webp",
+          "total": 440,
+          "totalQuantity": 880,
+          "options": {
+            "type": {
+              "label": "традиционное",
+              "price": 50
+            },
+            "size": {
+              "label": "26 см.",
+              "price": 25
+            }
+          },
+          "quantity": 2
+        },
+        {
+          "id": "kaN50wcQGqXfiBLsJBrrB",
+          "productId": 6,
+          "title": "Маргарита",
+          "image": "/products/pizza-margarita.webp",
+          "total": 570,
+          "totalQuantity": 1710,
+          "options": {
+            "type": {
+              "label": "традиционное",
+              "price": 50
+            },
+            "size": {
+              "label": "40 см.",
+              "price": 155
+            }
+          },
+          "quantity": 3
+        },
+        {
+          "id": "eVLgOyitFvo6WF7Hm8dGB",
+          "productId": 6,
+          "title": "Маргарита",
+          "image": "/products/pizza-margarita.webp",
+          "total": 515,
+          "totalQuantity": 1545,
+          "options": {
+            "type": {
+              "label": "традиционное",
+              "price": 50
+            },
+            "size": {
+              "label": "30 см.",
+              "price": 100
+            }
+          },
+          "quantity": 3
+        },
+        {
+          "id": "I8RJd5mXUp7jTH_bZ8V-7",
+          "productId": 6,
+          "title": "Маргарита",
+          "image": "/products/pizza-margarita.webp",
+          "total": 490,
+          "totalQuantity": 1470,
+          "options": {
+            "type": {
+              "label": "тонкое",
+              "price": 25
+            },
+            "size": {
+              "label": "30 см.",
+              "price": 100
+            }
+          },
+          "quantity": 3
+        },
+        {
+          "id": "dTWpNzyvB8CrFAEC21KUG",
+          "productId": 6,
+          "title": "Маргарита",
+          "image": "/products/pizza-margarita.webp",
+          "total": 415,
+          "totalQuantity": 1660,
+          "options": {
+            "type": {
+              "label": "тонкое",
+              "price": 25
+            },
+            "size": {
+              "label": "26 см.",
+              "price": 25
+            }
+          },
+          "quantity": 4
+        }
+      ],
+      "price": {
+        "count": 7265,
+        "oldCount": 0,
+        "sale": null,
+        "promocode": null
+      },
+      "countItems": 15,
+      "id": 18
+    },
+    {
+      "client": {
+        "name": "Павел",
+        "phone": "+7 (787) 877 87-78",
+        "city": "г. Кемерово",
+        "street": "пр-кт. Московский",
+        "house": "17",
+        "houseBody": "",
+        "entrance": "1",
+        "floor": "",
+        "apartment": "283",
+        "intercom": "",
+        "comment": "Домофон не работает, звонить сюда +7 (787) 877 87-78",
+        "paymentType": "Картой курьеру",
+        "terms": true
+      },
+      "items": [
+        {
+          "id": "SME2uIZBCkCq_y_NW8zFE",
+          "productId": 6,
+          "title": "Маргарита",
+          "image": "/products/pizza-margarita.webp",
+          "total": 440,
+          "totalQuantity": 440,
+          "options": {
+            "type": {
+              "label": "традиционное",
+              "price": 50
+            },
+            "size": {
+              "label": "26 см.",
+              "price": 25
+            }
+          },
+          "quantity": 1
+        },
+        {
+          "id": "XVB1STtqecEvNjoK5Y1fO",
+          "productId": 11,
+          "title": "Вода без газов",
+          "image": "/products/aqua.webp",
+          "total": 75,
+          "totalQuantity": 300,
+          "options": {
+            "size": {
+              "label": "1л",
+              "price": 25
+            }
+          },
+          "quantity": 4
+        },
+        {
+          "id": "65O5WPdrQNMjYlekZsTF9",
+          "productId": 6,
+          "title": "Маргарита",
+          "image": "/products/pizza-margarita.webp",
+          "total": 365,
+          "totalQuantity": 1095,
+          "options": {
+            "type": {
+              "label": "тонкое",
+              "price": 25
+            },
+            "size": {
+              "label": "26 см.",
+              "price": 25
+            }
+          },
+          "quantity": 3
+        },
+        {
+          "id": "-uT5O8y8WMHjZfhGBgV5N",
+          "productId": 3,
+          "title": "Двойной цыпленок",
+          "image": "/products/pizza-ciplenok.webp",
+          "total": 400,
+          "totalQuantity": 800,
+          "options": {
+            "type": {
+              "label": "тонкое",
+              "price": 25
+            },
+            "size": {
+              "label": "26 см.",
+              "price": 25
+            }
+          },
+          "quantity": 2
+        },
+        {
+          "id": "RVh6dxiyFhfeZeYMPNVAn",
+          "productId": 3,
+          "title": "Двойной цыпленок",
+          "image": "/products/pizza-ciplenok.webp",
+          "total": 525,
+          "totalQuantity": 525,
+          "options": {
+            "type": {
+              "label": "тонкое",
+              "price": 25
+            },
+            "size": {
+              "label": "30 см.",
+              "price": 100
+            }
+          },
+          "quantity": 1
+        },
+        {
+          "id": "OsDoOZJKByQsV_23bBRPQ",
+          "productId": 1,
+          "title": "Нежный грибочек",
+          "image": "/products/pizza-gribochek.webp",
+          "total": 450,
+          "totalQuantity": 450,
+          "options": {
+            "type": {
+              "label": "традиционное",
+              "price": 50
+            },
+            "size": {
+              "label": "26 см.",
+              "price": 25
+            }
+          },
+          "quantity": 1
+        },
+        {
+          "id": "dPNhWqxOmBpcyUiIC3g3X",
+          "productId": 7,
+          "title": "Мясная",
+          "image": "/products/pizza-myasnaya.webp",
+          "total": 470,
+          "totalQuantity": 470,
+          "options": {
+            "type": {
+              "label": "традиционное",
+              "price": 50
+            },
+            "size": {
+              "label": "26 см.",
+              "price": 25
+            }
+          },
+          "quantity": 1
+        },
+        {
+          "id": "OjItX--CYBUwhGkUiATJb",
+          "productId": 5,
+          "title": "4 сезона",
+          "image": "/products/pizza-4sezon.webp",
+          "total": 460,
+          "totalQuantity": 460,
+          "options": {
+            "type": {
+              "label": "тонкое",
+              "price": 25
+            },
+            "size": {
+              "label": "26 см.",
+              "price": 25
+            }
+          },
+          "quantity": 1
+        },
+        {
+          "id": "ZIbMGyMJIZixC8vu0kmzz",
+          "productId": 10,
+          "title": "Чай",
+          "image": "/products/tea.webp",
+          "total": 60,
+          "totalQuantity": 60,
+          "options": {
+            "size": {
+              "label": "0.5л",
+              "price": 10
+            }
+          },
+          "quantity": 1
+        },
+        {
+          "id": "mm22iiHlz8ng2dwcjkB3f",
+          "productId": 9,
+          "title": "Coca cola",
+          "image": "/products/cocacola.webp",
+          "total": 130,
+          "totalQuantity": 130,
+          "options": {
+            "size": {
+              "label": "1л",
+              "price": 50
+            }
+          },
+          "quantity": 1
+        },
+        {
+          "id": "t7efDvUuSziqpR5pncjGz",
+          "productId": 2,
+          "title": "Карбонара",
+          "image": "/products/pizza-carbonara.webp",
+          "total": 605,
+          "totalQuantity": 605,
+          "options": {
+            "type": {
+              "label": "традиционное",
+              "price": 50
+            },
+            "size": {
+              "label": "40 см.",
+              "price": 155
+            }
+          },
+          "quantity": 1
+        }
+      ],
+      "price": {
+        "count": 3201,
+        "oldCount": 5335,
+        "sale": 40,
+        "promocode": {
+          "id": 0,
+          "sale": 40,
+          "block_price": 3999,
+          "code": "promo3999"
+        }
+      },
+      "countItems": 17,
+      "id": 19
+    },
+    {
+      "client": {
+        "name": "PalBush",
+        "phone": "+7 (766) 776 76-76",
+        "city": "Кемерово",
+        "street": "GHGH",
+        "house": "GH",
+        "houseBody": "",
+        "entrance": "56",
+        "floor": "",
+        "apartment": "55",
+        "intercom": "",
+        "comment": "",
+        "paymentType": "Картой курьеру",
+        "terms": true
+      },
+      "items": [
+        {
+          "id": "rQcPrUsD28MxpPFAOPhSt",
+          "productId": 5,
+          "title": "4 сезона",
+          "image": "/products/pizza-4sezon.webp",
+          "total": 665,
+          "totalQuantity": 3325,
+          "options": {
+            "type": {
+              "label": "традиционное",
+              "price": 50
+            },
+            "size": {
+              "label": "40 см.",
+              "price": 155
+            }
+          },
+          "quantity": 5
+        },
+        {
+          "id": "FUzQfHOWkY8Wzx-gNhJGB",
+          "productId": 4,
+          "title": "Ветчина и сыр",
+          "image": "/products/pizza-vetchinacir.webp",
+          "total": 370,
+          "totalQuantity": 740,
+          "options": {
+            "type": {
+              "label": "тонкое",
+              "price": 25
+            },
+            "size": {
+              "label": "26 см.",
+              "price": 25
+            }
+          },
+          "quantity": 2
+        },
+        {
+          "id": "opR03S5jDD5RiKYwelRVr",
+          "productId": 2,
+          "title": "Карбонара",
+          "image": "/products/pizza-carbonara.webp",
+          "total": 400,
+          "totalQuantity": 2400,
+          "options": {
+            "type": {
+              "label": "тонкое",
+              "price": 25
+            },
+            "size": {
+              "label": "26 см.",
+              "price": 25
+            }
+          },
+          "quantity": 6
+        },
+        {
+          "id": "atQ3AMd1LJKVNXdc6voaZ",
+          "productId": 0,
+          "title": "Цыпленок Пармеджано",
+          "image": "/products/pizza-parmejano.webp",
+          "total": 615,
+          "totalQuantity": 4305,
+          "options": {
+            "type": {
+              "label": "традиционное",
+              "price": 50
+            },
+            "size": {
+              "label": "40 см.",
+              "price": 155
+            }
+          },
+          "quantity": 7
+        },
+        {
+          "id": "DvQFXF2lS5cts8xfuz7kb",
+          "productId": 0,
+          "title": "Цыпленок Пармеджано",
+          "image": "/products/pizza-parmejano.webp",
+          "total": 560,
+          "totalQuantity": 5600,
+          "options": {
+            "type": {
+              "label": "традиционное",
+              "price": 50
+            },
+            "size": {
+              "label": "30 см.",
+              "price": 100
+            }
+          },
+          "quantity": 10
+        },
+        {
+          "id": "ClFf5T87HbcATMVZnBmkn",
+          "productId": 0,
+          "title": "Цыпленок Пармеджано",
+          "image": "/products/pizza-parmejano.webp",
+          "total": 535,
+          "totalQuantity": 2675,
+          "options": {
+            "type": {
+              "label": "тонкое",
+              "price": 25
+            },
+            "size": {
+              "label": "30 см.",
+              "price": 100
+            }
+          },
+          "quantity": 5
+        }
+      ],
+      "price": {
+        "count": 11427,
+        "oldCount": 19045,
+        "sale": 40,
+        "promocode": {
+          "id": 0,
+          "sale": 40,
+          "block_price": 3999,
+          "code": "promo3999"
+        }
+      },
+      "countItems": 35,
+      "id": 20
     }
   ]
 }

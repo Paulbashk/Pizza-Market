@@ -1,2 +1,2 @@
 export { CategoryService } from './categoryService';
-export type { FetchGetAllResponse } from './types';
+export type { TGetAllResponse } from './types';

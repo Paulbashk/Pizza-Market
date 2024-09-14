@@ -1,0 +1,1 @@
+export { mapToInputsGroups } from './mapToInputsGroups';

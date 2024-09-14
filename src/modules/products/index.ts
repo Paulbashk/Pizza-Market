@@ -1,1 +1,0 @@
-export { ProductCardsSection } from './ui';

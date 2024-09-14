@@ -1,14 +1,11 @@
-import { EntityId, EntityState } from '@reduxjs/toolkit';
-import type { QueryState } from '@/shared/libs/types';
+import type { EntityId, EntityState } from '@reduxjs/toolkit';
+import type { TQueryState } from '@/shared/types';
+import type { ITag } from '@/shared/types/interfaces';
 
 export namespace Tag {
-  export type State = QueryState;
+  export type State = TQueryState;
 
-  export interface Item {
-    readonly id: number;
-    category: number;
-    name: string;
-  }
+  export interface Item extends ITag {}
 
   export type Variable = EntityId | TagVariables.ALL;
 

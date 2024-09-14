@@ -1,6 +1,8 @@
-export const useScrollToAnchor =
-  (offset: number = 0) =>
-  (targetAnchor: string) => {
+type TUseScrollToAnchor = (offset?: number) => (targetAnchor: string) => void;
+
+export const useScrollToAnchor: TUseScrollToAnchor =
+  (offset = 0) =>
+  targetAnchor => {
     if (!(typeof window === 'undefined')) {
       const hash = targetAnchor;
 

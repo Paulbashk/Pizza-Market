@@ -12,6 +12,10 @@ export const MainModal = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: ${props => props.theme.breakpoints.SM}px) {
+    padding: 0 16px;
+  }
 `;
 
 export const ModalOverlay = styled.div`
@@ -33,4 +37,9 @@ export const ModalWindow = styled.div`
   background-color: ${props => props.theme.colors.white};
   z-index: 1;
   border-radius: 16px;
+
+  @media (max-width: ${props => props.theme.breakpoints.SM}px) {
+    max-width: unset;
+    width: 100%;
+  }
 `;

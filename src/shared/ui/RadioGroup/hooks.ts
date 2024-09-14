@@ -1,19 +1,29 @@
 import { useMemo, useState, type ChangeEvent } from 'react';
-import { useGenerateId } from '@/shared/libs/hooks';
+import { uniqueID } from '@/shared/libs/utils';
 
-type TypeArgsUseRadioGroupValue = {
+type TUseRadioGroupValueProps = {
   onChange?: (event: ChangeEvent<HTMLInputElement>, value?: string) => void;
   defaultValue: string | number;
   propName?: string;
 };
 
-export const useRadioGroupValue = ({
+type TUseRadioGroupValuerReturn = {
+  name: string;
+  value: string | number;
+  onChange(event: ChangeEvent<HTMLInputElement>): void;
+};
+
+type TUseRadioGroupValue = (
+  props: TUseRadioGroupValueProps,
+) => TUseRadioGroupValuerReturn;
+
+export const useRadioGroupValue: TUseRadioGroupValue = ({
   defaultValue,
   propName,
   onChange,
-}: TypeArgsUseRadioGroupValue) => {
+}) => {
   const [value, setValue] = useState<string | number>(defaultValue);
-  const { current: name } = useGenerateId(propName, true);
+  const name = propName ?? uniqueID().toString();
 
   return useMemo(
     () => ({

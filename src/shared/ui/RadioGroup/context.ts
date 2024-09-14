@@ -2,12 +2,12 @@
 
 import { type ChangeEvent, createContext } from 'react';
 
-export interface RadioGroupContextValue {
+export interface IRadioGroupContextValue {
   name: string;
   value: string | number;
   onChange: (event: ChangeEvent<HTMLInputElement>, value: string) => void;
 }
 
 export const RadioGroupContext = createContext<
-  RadioGroupContextValue | undefined
+  IRadioGroupContextValue | undefined
 >(undefined);

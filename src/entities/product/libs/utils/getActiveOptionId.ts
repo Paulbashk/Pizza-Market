@@ -1,5 +1,5 @@
-import { type Product } from '@/entities/product/model/types';
 import { findIndexByKeyObject } from '@/shared/libs/utils';
+import { type Product } from '../../model/types';
 
 export const getActiveOptionId = (option: Product.Options): number =>
   option.activeItem !== undefined

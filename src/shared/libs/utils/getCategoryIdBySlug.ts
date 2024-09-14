@@ -1,4 +1,4 @@
-import { ICategory } from '@/shared/types/interfaces';
+import { type ICategory } from '../../types/interfaces';
 
 export const getCategoryIdBySlug = (
   categories: ICategory[],

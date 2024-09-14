@@ -7,19 +7,31 @@ import {
   type RefObject,
 } from 'react';
 
-type TypeArgsUseStateDropdown = {
+type TUseStateDropdownProps = {
   onOpen?: (open: boolean) => boolean;
   triggerOnClick?: () => void;
   selected?: number;
   onSelected?: (id: number) => void;
 };
 
-export const useHandleStateDropdown = ({
+type TUseStateDropdownReturn = {
+  dropdownRef: RefObject<HTMLDivElement>;
+  isOpen: boolean;
+  setOpenWithOnOpen: (value: boolean) => void;
+  handleOpen: () => void;
+  renderItem: (item: ReactElement, id: number) => ReactElement;
+};
+
+type TUseHandleStateDropdown = (
+  props: TUseStateDropdownProps,
+) => TUseStateDropdownReturn;
+
+export const useHandleStateDropdown: TUseHandleStateDropdown = ({
   onOpen,
   triggerOnClick,
   selected,
   onSelected,
-}: TypeArgsUseStateDropdown) => {
+}) => {
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -82,15 +94,17 @@ export const useHandleStateDropdown = ({
   };
 };
 
-type TypeArgsUseDropdownEvents = {
+type TUseDropdownEventsProps = {
   dropdownRef: RefObject<HTMLDivElement>;
   setOpenWithOnOpen: (value: boolean) => void;
 };
 
-export const useDropdownEvents = ({
+type TUseDropdownEvents = (props: TUseDropdownEventsProps) => void;
+
+export const useDropdownEvents: TUseDropdownEvents = ({
   dropdownRef,
   setOpenWithOnOpen,
-}: TypeArgsUseDropdownEvents) => {
+}) => {
   useEffect(() => {
     if (dropdownRef.current) {
       const ref = dropdownRef.current;

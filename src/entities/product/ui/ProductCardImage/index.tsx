@@ -3,12 +3,12 @@ import Image from 'next/image';
 // assets
 import * as S from './styled';
 
-interface ProductCardImageProps {
+interface IProductCardImageProps {
   image: string;
   title: string;
 }
 
-export const ProductCardImage = ({ image, title }: ProductCardImageProps) => (
+export const ProductCardImage = ({ image, title }: IProductCardImageProps) => (
   <S.WrapperImage>
     <Image
       src={image}

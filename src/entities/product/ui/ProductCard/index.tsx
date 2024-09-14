@@ -3,18 +3,15 @@
 import { memo } from 'react';
 
 // hooks
-import {
-  useSelectProductOption,
-  useProductState,
-} from '@/entities/product/libs/hooks';
+import { useSelectProductOption, useProductState } from '../../libs/hooks';
 
 // components
-import { ProductCardOptions } from '@/entities/product/ui/ProductCardOptions';
-import { ProductCardImage } from '@/entities/product/ui/ProductCardImage';
-import { ProductCardFooter } from '@/entities/product/ui/ProductCardFooter';
+import { ProductCardOptions } from '../ProductCardOptions';
+import { ProductCardImage } from '../ProductCardImage';
+import { ProductCardFooter } from '../ProductCardFooter';
 
 // types
-import type { ProductCardProps } from './types';
+import type { IProductCardProps } from './types';
 
 // assets
 import * as S from './styled';
@@ -23,15 +20,16 @@ const TitleMemo = memo(S.Title);
 const ProductCardOptionsMemo = memo(ProductCardOptions);
 const ImageMemo = memo(ProductCardImage);
 
-export function ProductCard({ id, renderButton }: ProductCardProps) {
-  const { state, totalPrice, setTotalPrice } = useProductState(id);
-  const { title, image, isOptions, options, defaultPrice } = state;
+export function ProductCard({ id, sale, renderButton }: IProductCardProps) {
+  const { state, price, setPrice, defaultState } = useProductState(id, sale);
+  const { title, image, isOptions, options } = state;
 
   const handleSelect = useSelectProductOption({
     isOptions,
     options,
-    defaultPrice,
-    setTotalPrice,
+    sale,
+    defaultTotal: defaultState.total,
+    setPrice,
   });
 
   return (
@@ -40,13 +38,17 @@ export function ProductCard({ id, renderButton }: ProductCardProps) {
       <S.Content>
         <TitleMemo>{title}</TitleMemo>
         {isOptions && (
-          <ProductCardOptionsMemo handleSelect={handleSelect} id={id} />
+          <ProductCardOptionsMemo
+            options={options!}
+            handleSelect={handleSelect}
+          />
         )}
         <ProductCardFooter
           id={id}
           title={title}
           image={image}
-          price={totalPrice}
+          price={price}
+          sale={sale}
           renderButton={renderButton}
         />
       </S.Content>

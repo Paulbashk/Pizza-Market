@@ -1,10 +1,20 @@
+'use client';
+
 import { useEffect } from 'react';
 import { useAppDispatch } from '@/shared/libs/hooks';
 import { useSelector } from 'react-redux';
-import { queryState } from '@/entities/product/model/selectors';
-import { getProductsThunk } from '@/entities/product/model/async-actions';
+import { queryState } from '../../model/selectors';
+import { getProductsThunk } from '../../model/async-actions';
 
-export const useQueryProductList = (categoryId: number) => {
+type TUseQueryProductListReturn = {
+  isLoading: boolean;
+  isError: boolean;
+  error: string | undefined;
+};
+
+export const useQueryProductList = (
+  categoryId: number,
+): TUseQueryProductListReturn => {
   const dispatch = useAppDispatch();
 
   const state = useSelector(queryState);

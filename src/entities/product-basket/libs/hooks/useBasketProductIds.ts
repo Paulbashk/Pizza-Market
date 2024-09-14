@@ -1,4 +1,12 @@
 import { useSelector } from 'react-redux';
-import { getIds } from '@/entities/product-basket/model/selectors';
+import { type EntityId } from '@reduxjs/toolkit';
+import { getIdsWithSale } from '../../model/selectors';
+import { type ProductBasket } from '../../model/types';
 
-export const useBasketProductIds = () => useSelector(getIds);
+type TUseBasketProductIds = () => {
+  ids: EntityId[];
+  sale: ProductBasket.Sale;
+};
+
+export const useBasketProductIds: TUseBasketProductIds = () =>
+  useSelector(getIdsWithSale);

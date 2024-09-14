@@ -1,5 +1,17 @@
+import { AppState } from '@/app/_root/store';
+import { type Tag, TagVariables } from '@/entities/tag/model/types';
 import { useSelector } from 'react-redux';
-import { type Tag } from '@/entities/tag/model/types';
-import { getById } from '@/entities/tag/model/selectors';
+import { byId } from '@/entities/tag/model/selectors';
 
-export const useTagById = (id: Tag.Variable) => useSelector(getById(id));
+type TUseTagById = (id: Tag.Variable) =>
+  | Tag.Item
+  | {
+      name: string;
+    }
+  | undefined;
+
+export const useTagById: TUseTagById = id => {
+  const item = useSelector((state: AppState) => byId(state, id));
+
+  return id === TagVariables.ALL ? { name: 'Все' } : item;
+};

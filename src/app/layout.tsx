@@ -1,5 +1,5 @@
 import { type Metadata } from 'next';
-import type { ReactNode } from 'react';
+import { type ReactNode } from 'react';
 import RootProvides from '@/app/_root/provides';
 
 // services
@@ -14,19 +14,19 @@ export const metadata: Metadata = {
     'Самая вкусная пицца, напитки, закуски со скидкой по промокоду у нас',
 };
 
-interface RootLayoutProps {
+interface IRootLayoutProps {
   children: ReactNode;
 }
 
-export default async function RootLayout({ children }: RootLayoutProps) {
-  const { categories, logo } = await headerService();
+export default async function RootLayout({ children }: IRootLayoutProps) {
+  const { menuItems, logo } = await headerService();
 
   return (
     <html lang="ru">
       <body>
         <RootProvides>
           <main>
-            <Header categories={categories} logo={logo} />
+            <Header menuItems={menuItems} logo={logo} />
             {children}
           </main>
         </RootProvides>

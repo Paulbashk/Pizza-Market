@@ -1,21 +1,33 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, type MutableRefObject } from 'react';
 
-// utils
+// libs
 import { callIsDefined } from '@/shared/libs/utils';
 
-type TypeArgsUseHandleChainedModal = {
+type TUseHandleChainedModalProps = {
   afterOpen?: () => void;
   afterClose?: () => void;
   onEscapeKeydown?: (event?: KeyboardEvent) => void;
   isOpenProp: boolean;
 };
 
-export const useHandleChainedModal = ({
+type TUseHandleChaienedModalReturn = {
+  prevBodyOverflowStyle: MutableRefObject<string | null>;
+  isTransitioning: MutableRefObject<boolean>;
+  isOpen: boolean;
+  handleChange: (callback: (() => void | Promise<void>) | undefined) => void;
+  handleKeydown: (event: KeyboardEvent) => void;
+};
+
+type TUseHandleChaienedModal = (
+  props: TUseHandleChainedModalProps,
+) => TUseHandleChaienedModalReturn;
+
+export const useHandleChainedModal: TUseHandleChaienedModal = ({
   afterOpen,
   afterClose,
   onEscapeKeydown,
   isOpenProp,
-}: TypeArgsUseHandleChainedModal) => {
+}) => {
   const prevBodyOverflowStyle = useRef<null | string>(null);
   const isTransitioning = useRef<boolean>(false);
 

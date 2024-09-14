@@ -1,7 +1,7 @@
 import { type Draft, type EntityId } from '@reduxjs/toolkit';
-import { type ProductBasket } from '@/entities/product-basket/model/types';
-import { type ProductTypes } from '@/entities/product-basket/@x/product';
 import { objectComparsion } from '@/shared/libs/utils';
+import { type ProductTypes } from '../../@x/product';
+import { type ProductBasket } from '../../model/types';
 
 export const findByProductId = (
   entities: (Draft<ProductBasket.Product> | undefined)[],

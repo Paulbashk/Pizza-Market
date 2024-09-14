@@ -1,2 +1,1 @@
-export { TagList } from './TagList';
-export { tagListWithQuery } from './tagListWithQuery';
+export { TagButton } from './TagButton';

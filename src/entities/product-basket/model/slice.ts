@@ -2,13 +2,11 @@ import {
   type PayloadAction,
   createSlice,
   createEntityAdapter,
+  nanoid,
 } from '@reduxjs/toolkit';
-import { uniqueID } from '@/shared/libs/utils';
-import {
-  findByProductId,
-  findById,
-} from '@/entities/product-basket/libs/utils';
+import { calcPriceWithSale, findByProductId } from '../libs/utils';
 import type { ProductBasket } from './types';
+import { actionAddPrice, actionReducePrice } from './helpers';
 
 export const productsBasketAdapter =
   createEntityAdapter<ProductBasket.Product>();
@@ -17,6 +15,9 @@ const initialState = productsBasketAdapter.getInitialState<ProductBasket.State>(
   {
     price: {
       count: 0,
+      oldCount: 0,
+      sale: null,
+      promocode: null,
     },
   },
 );
@@ -31,7 +32,7 @@ const productBasketSlice = createSlice({
     ) => {
       const { productId, total, options, title, image } = action.payload;
 
-      state.price.count += total;
+      actionAddPrice(state, { count: total });
 
       const { entities } = state;
 
@@ -53,7 +54,7 @@ const productBasketSlice = createSlice({
         });
       } else {
         productsBasketAdapter.addOne(state, {
-          id: uniqueID(),
+          id: nanoid(),
           productId,
           title,
           image,
@@ -68,33 +69,35 @@ const productBasketSlice = createSlice({
       state,
       action: PayloadAction<ProductBasket.PayloadDeleteBasket>,
     ) => {
-      const { entities } = state;
+      const id = action.payload;
 
-      const existingProduct = findById(Object.values(entities), action.payload);
+      const selectors = productsBasketAdapter.getSelectors();
+      const existingProduct = selectors.selectById(state, id);
 
       if (existingProduct) {
         const { totalQuantity } = existingProduct;
 
-        state.price.count -= totalQuantity;
+        actionReducePrice(state, { count: totalQuantity });
 
-        productsBasketAdapter.removeOne(state, action.payload);
+        productsBasketAdapter.removeOne(state, id);
       }
     },
     addQuantityProduct: (
       state,
       action: PayloadAction<ProductBasket.PayloadAddQuantity>,
     ) => {
-      const { entities } = state;
+      const id = action.payload;
 
-      const existingProduct = findById(Object.values(entities), action.payload);
+      const selectors = productsBasketAdapter.getSelectors();
+      const existingProduct = selectors.selectById(state, id);
 
       if (existingProduct) {
         const { total, quantity, totalQuantity } = existingProduct;
 
-        state.price.count += total;
+        actionAddPrice(state, { count: total });
 
         productsBasketAdapter.updateOne(state, {
-          id: action.payload,
+          id,
           changes: {
             quantity: quantity + 1,
             totalQuantity: totalQuantity + total,
@@ -106,32 +109,61 @@ const productBasketSlice = createSlice({
       state,
       action: PayloadAction<ProductBasket.PayloadReduceQuantity>,
     ) => {
-      const { entities } = state;
+      const id = action.payload;
 
-      const existingProduct = findById(Object.values(entities), action.payload);
+      const selectors = productsBasketAdapter.getSelectors();
+      const existingProduct = selectors.selectById(state, id);
 
       if (existingProduct) {
         const { total, quantity, totalQuantity } = existingProduct;
 
         const reduceQuantity = quantity - 1;
 
-        state.price.count -= total;
+        actionReducePrice(state, { count: total });
 
-        // delete
         if (reduceQuantity === 0) {
-          productsBasketAdapter.removeOne(state, action.payload);
+          productsBasketAdapter.removeOne(state, id);
 
           return;
         }
 
         productsBasketAdapter.updateOne(state, {
-          id: action.payload,
+          id,
           changes: {
             quantity: reduceQuantity,
             totalQuantity: totalQuantity - total,
           },
         });
       }
+    },
+    setPromocode: (
+      state,
+      action: PayloadAction<ProductBasket.PayloadSetPromocode>,
+    ) => {
+      const { sale, promocode } = action.payload;
+      const { count } = state.price;
+
+      state.price.sale = sale;
+      state.price.promocode = promocode;
+
+      if (sale) {
+        state.price.oldCount = count;
+
+        state.price.count = calcPriceWithSale(count, sale);
+      } else {
+        state.price.count = state.price.oldCount;
+
+        state.price.oldCount = 0;
+      }
+    },
+    clearBasket: state => {
+      productsBasketAdapter.removeAll(state);
+      state.price = {
+        count: 0,
+        oldCount: 0,
+        sale: null,
+        promocode: null,
+      };
     },
   },
 });

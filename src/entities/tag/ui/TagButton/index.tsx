@@ -1,20 +1,24 @@
-// libs/hooks
-import { useTagById } from '@/entities/tag/libs/hooks';
-
-// types
-import { type Tag } from '@/entities/tag/model/types';
-
 // components
 import { Button, ButtonColors } from '@/shared/ui';
 
-interface TagButtonProps {
+// libs/hooks
+import { useTagById } from '../../libs/hooks';
+
+// types
+import { type Tag } from '../../model/types';
+
+interface ITagButtonProps {
   id: Tag.Variable;
   isActive: boolean;
   onClick: (id: Tag.Variable) => void;
 }
 
-export const TagButton = ({ id, isActive, onClick }: TagButtonProps) => {
-  const { name } = useTagById(id);
+export const TagButton = ({ id, isActive, onClick }: ITagButtonProps) => {
+  const productTag = useTagById(id);
+
+  if (!productTag) return null;
+
+  const { name } = productTag;
 
   const handleClick = () => {
     onClick(id);

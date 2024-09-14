@@ -1,7 +1,7 @@
 import type { ComponentPropsWithoutRef, ReactNode } from 'react';
 import * as S from './styled';
 
-interface ContainerProps extends ComponentPropsWithoutRef<'div'> {
+interface IContainerProps extends ComponentPropsWithoutRef<'div'> {
   children: ReactNode;
 }
 
@@ -9,7 +9,7 @@ export const Container = ({
   children,
   className,
   ...otherProps
-}: ContainerProps) => (
+}: IContainerProps) => (
   <S.Container
     className={className ? ['container', className].join(' ') : 'container'}
     {...otherProps}

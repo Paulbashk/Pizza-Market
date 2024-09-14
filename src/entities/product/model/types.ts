@@ -1,40 +1,31 @@
-import type { EntityId, EntityState } from '@reduxjs/toolkit';
-import type { QueryState } from '@/shared/libs/types';
 import type { ReactElement } from 'react';
+import type { EntityId, EntityState } from '@reduxjs/toolkit';
+import type { TQueryState } from '@/shared/types';
+import type {
+  IProduct,
+  IProductOption,
+  IProductOptions,
+  ITransformOption,
+  TPriceSale,
+} from '@/shared/types/interfaces';
 
 export namespace Product {
-  export type State = QueryState;
+  export type State = TQueryState;
 
   export type MakeSelectQuery = EntityState<Item>;
 
-  export interface Item {
-    readonly id: number;
-    category: number;
-    tag: number;
-    priority: number;
-    title: string;
-    price: number;
-    image: string;
-    options?: Options[];
-  }
+  export interface Item extends IProduct {}
+  export interface Options extends IProductOptions {}
+  export interface Option extends IProductOption {}
+  export type TransformOption = ITransformOption;
 
-  export interface Options {
-    name: string;
-    activeItem?: string;
-    items: Option[];
+  export interface PriceTotal {
+    count: number;
+    saleCount: number;
   }
-
-  export interface Option {
-    label: string;
-    price: number;
-  }
-
-  export type TransformOption = {
-    [name: string]: Option;
-  };
 
   export interface Price {
-    total: number;
+    total: PriceTotal;
     options?: TransformOption;
   }
 
@@ -44,6 +35,8 @@ export namespace Product {
     image: string;
     price: Price;
   }
+
+  export type Sale = TPriceSale;
 
   export type RenderButton = (product: RenderButtonProps) => ReactElement;
 }

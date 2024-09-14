@@ -1,11 +1,11 @@
 import { type ComponentPropsWithoutRef } from 'react';
 import { Wrapper, Container } from '@/shared/ui';
 
-interface SectionProps extends ComponentPropsWithoutRef<'div'> {
+interface ISectionProps extends ComponentPropsWithoutRef<'section'> {
   name?: string;
 }
 
-export const Section = ({ name, children, ...otherProps }: SectionProps) => (
+export const Section = ({ name, children, ...otherProps }: ISectionProps) => (
   <section
     className={name ? ['section', name].join(' ') : 'section'}
     id={name !== 'section' ? `section-${name}` : undefined}

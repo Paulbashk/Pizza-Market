@@ -1,27 +1,29 @@
+// type
+import type { IMenuItem, ILogo } from '@/shared/types/interfaces';
+
 // components
 import { Container } from '@/shared/ui';
 import { Logo } from '@/entities/logo';
-import { CategoriesMenu } from '@/entities/categories-menu';
-import { HeaderBasket } from '@/modules/header/ui/HeaderBasket';
-
-// type
-import type { ICategory, ILogo } from '@/shared/types/interfaces';
+import { HeaderMenuIsDesktop } from '../HeaderMenuIsDesktop';
+import { HeaderButtonIsMobile } from '../HeaderButtonIsMobile';
+import { HeaderHamburgerNotDesktop } from '../HeaderHamburgerNotDesktop';
 
 // assets
 import * as S from './styled';
 
-interface HeaderProps {
-  categories: ICategory[];
+interface IHeaderProps {
+  menuItems: IMenuItem[];
   logo: ILogo;
 }
 
-export const Header = ({ categories, logo }: HeaderProps) => (
+export const Header = ({ menuItems, logo }: IHeaderProps) => (
   <S.Header>
     <Container>
       <S.WrapperHeader>
         <Logo logo={logo} />
-        {categories.length > 0 && <CategoriesMenu categories={categories} />}
-        <HeaderBasket />
+        <HeaderMenuIsDesktop menuItems={menuItems} />
+        <HeaderButtonIsMobile />
+        <HeaderHamburgerNotDesktop menuItems={menuItems} />
       </S.WrapperHeader>
     </Container>
   </S.Header>

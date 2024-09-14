@@ -1,0 +1,1 @@
+export { sortedTypes } from './sorted';

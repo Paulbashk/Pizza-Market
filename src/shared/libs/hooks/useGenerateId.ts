@@ -1,12 +1,16 @@
 'use client';
 
-import { useRef, useMemo } from 'react';
+import { useRef, useMemo, type MutableRefObject } from 'react';
 import { uniqueID } from '@/shared/libs/utils';
 
-export const useGenerateId = (
-  id: string | number | undefined,
-  withRadnom: boolean = false,
-) => {
+type TUseGenerateIdProps = {
+  id: string | number | undefined;
+  withRadnom?: boolean;
+};
+
+type TUseGenerateId = (props: TUseGenerateIdProps) => MutableRefObject<string>;
+
+export const useGenerateId: TUseGenerateId = ({ id, withRadnom = false }) => {
   const random = uniqueID().toString();
 
   return useRef(

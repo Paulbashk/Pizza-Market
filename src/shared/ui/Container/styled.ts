@@ -9,16 +9,8 @@ export const Container = styled.div`
   margin-right: auto;
   margin-left: auto;
 
-  @media (min-width: ${props => props.theme.breakpoints.XXL}px) {
+  @media (min-width: ${props => props.theme.breakpoints.XL}px) {
     max-width: 1300px;
-  }
-
-  @media (max-width: ${props => props.theme.breakpoints.LG}px) {
-    max-width: 960px;
-  }
-
-  @media (max-width: ${props => props.theme.breakpoints.MD}px) {
-    max-width: 720px;
   }
 
   @media (max-width: ${props => props.theme.breakpoints.SM}px) {
@@ -30,6 +22,4 @@ export const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  margin-right: -15px;
-  margin-left: -15px;
 `;

@@ -1,39 +1,40 @@
 'use client';
 
 import { type ChangeEvent } from 'react';
-import { EntityId } from '@reduxjs/toolkit';
+import { nanoid } from '@reduxjs/toolkit';
+
+// types
+import { type Product } from '../../model/types';
 
 // utils
-import { useOnlyOptions } from '@/entities/product/libs/hooks';
-import { getActiveOptionId } from '@/entities/product/libs/utils';
+import { getActiveOptionId } from '../../libs/utils';
 
 // assets
 import * as S from './styled';
 
-interface ProductCardOptionsProps {
+interface IProductCardOptionsProps {
   handleSelect: (optionId: number, selected: string) => void;
-  id: EntityId;
+  options: Product.Options[];
 }
 
 export function ProductCardOptions({
   handleSelect,
-  id,
-}: ProductCardOptionsProps) {
-  const { options } = useOnlyOptions(id);
-
+  options,
+}: IProductCardOptionsProps) {
   return (
     <S.Wrapper>
-      {options!.map((option, _id: number) => {
+      {options!.map((option, optionId: number) => {
         const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-          handleSelect(_id, event.target.value);
+          handleSelect(optionId, event.target.value);
         };
 
         const defaultValue = option.items[getActiveOptionId(option)].label;
+        const optionName = option.name + nanoid();
 
         return (
           <S.RadioGroupOptions
             key={option.name}
-            name={option.name}
+            name={optionName}
             defaultValue={defaultValue}
             onChange={handleChange}
           >

@@ -17,16 +17,27 @@ export const Title = styled(CreatedTitle('h3'))`
   text-align: center;
   color: ${props => props.theme.colors.black};
   margin-bottom: 16px;
-`;
 
-// import
-export const Variables = styled.div`
-  width: 100%;
-  background-color: ${props => props.theme.colors.lightgray};
-  border-radius: 12px;
-  padding: 8px;
-  display: flex;
-  flex-direction: column;
-  row-gap: 8px;
-  margin-bottom: 16px;
+  @media (max-width: ${props => props.theme.breakpoints.XL}px) {
+    margin-bottom: 12px;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (max-width: ${props => props.theme.breakpoints.LG}px) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  @media (max-width: ${props => props.theme.breakpoints.MD}px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (max-width: ${props => props.theme.breakpoints.SM}px) {
+    margin-bottom: 8px;
+  }
 `;

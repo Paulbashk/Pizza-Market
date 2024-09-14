@@ -42,5 +42,15 @@ export const GlobalStyle = createGlobalStyle`
     position: relative;
     padding: 60px 0;
     row-gap: 40px;
+
+    @media (max-width: ${props => props.theme.breakpoints.XL}px) {
+      row-gap: 24px;
+      padding: 24px 0;
+    }
+
+    @media (max-width: ${props => props.theme.breakpoints.MD}px) {
+      row-gap: 16px;
+      padding: 16px 0;
+    }
   }
 `;

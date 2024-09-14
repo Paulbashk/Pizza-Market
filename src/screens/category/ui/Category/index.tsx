@@ -7,16 +7,18 @@ import { categoryScreenService } from '@/shared/server/api';
 import { getCategoryIdBySlug } from '@/shared/libs/utils/getCategoryIdBySlug';
 
 // components
-import { BannerSection } from '@/modules/banners';
-import { ProductCardsSection } from '@/modules/products';
+import { SectionBanner } from '@/modules/section-banners';
+import { SectionProducts } from '@/modules/section-products';
+import { Products } from '../Products';
+import { Tags } from '../Tags';
 
-interface CategoryScreenParams {
+interface ICategoryScreenProps {
   params: {
     slug?: string;
   };
 }
 
-export const CategoryScreen = async ({ params }: CategoryScreenParams) => {
+export const CategoryScreen = async ({ params }: ICategoryScreenProps) => {
   const { categories, banners } = await categoryScreenService();
   const { slug } = params;
 
@@ -28,8 +30,12 @@ export const CategoryScreen = async ({ params }: CategoryScreenParams) => {
 
   return (
     <>
-      {banners.length > 0 && <BannerSection banners={banners} />}
-      <ProductCardsSection category={categories[categoryId]} />
+      {banners.length > 0 && <SectionBanner banners={banners} />}
+      <SectionProducts
+        category={categories[categoryId]}
+        tagListRender={id => <Tags categoryId={id} />}
+        productListRender={id => <Products categoryId={id} />}
+      />
     </>
   );
 };

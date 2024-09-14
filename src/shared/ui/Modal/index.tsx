@@ -13,7 +13,7 @@ import { useHandleChainedModal } from './hooks';
 // assets
 import { MainModal, ModalOverlay, ModalWindow } from './styled';
 
-interface ModalProps extends ComponentPropsWithoutRef<'div'> {
+interface IModalProps extends ComponentPropsWithoutRef<'div'> {
   children: ReactNode;
   isOpen: boolean;
   onEscapeKeydown?: (event?: KeyboardEvent) => void;
@@ -34,7 +34,7 @@ export const Modal = ({
   beforeClose,
   afterClose,
   ...modalProps
-}: ModalProps) => {
+}: IModalProps) => {
   const {
     prevBodyOverflowStyle,
     isTransitioning,

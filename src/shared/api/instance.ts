@@ -1,8 +1,10 @@
-import axios from 'axios';
+import axios, { type AxiosInstance } from 'axios';
 
-const instanceApiClient = () => {
+type TInstanceApiClient = () => AxiosInstance;
+
+const instanceApiClient: TInstanceApiClient = () => {
   if (!process.env.NEXT_PUBLIC_API_URL) {
-    throw new Error('NEXT_PUBLIC_API_URL is not defined');
+    throw new Error('PUBLIC API URL is not defined');
   }
 
   return axios.create({
@@ -10,6 +12,6 @@ const instanceApiClient = () => {
   });
 };
 
-const ApiClient = instanceApiClient();
+const ApiClient: AxiosInstance = instanceApiClient();
 
 export default ApiClient;

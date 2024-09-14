@@ -1,9 +1,14 @@
-export const sortByOrderWithParam = <T extends Record<string, string | number>>(
+function sortByOrderWithParam<T extends object>(
   type: 'DESC' | 'ASC',
-  itr: T[] | object,
+  itr: T[],
   param: string,
-) =>
-  (typeof itr === 'object' ? Object.values(itr) : itr).sort(
+): T[];
+function sortByOrderWithParam<T extends Record<string, string | number>>(
+  type: 'DESC' | 'ASC',
+  itr: object,
+  param: string,
+): object {
+  return (typeof itr === 'object' ? Object.values(itr) : itr).sort(
     (a: T, b: T): number => {
       const getValue = (value: string | number) =>
         typeof value === 'string' ? value.toLowerCase() : value;
@@ -24,3 +29,5 @@ export const sortByOrderWithParam = <T extends Record<string, string | number>>(
       return 0;
     },
   );
+}
+export { sortByOrderWithParam };

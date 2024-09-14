@@ -6,11 +6,11 @@ import type { ILogo } from '@/shared/types/interfaces';
 // assets
 import * as S from './styled';
 
-interface LogoProps {
+interface ILogoProps {
   logo: ILogo;
 }
 
-export const Logo = ({ logo }: LogoProps) => {
+export const Logo = ({ logo }: ILogoProps) => {
   const { src, name, subdesc } = logo;
 
   return (

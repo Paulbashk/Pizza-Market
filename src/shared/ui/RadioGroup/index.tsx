@@ -1,37 +1,47 @@
 'use client';
 
-import { type ComponentPropsWithoutRef, type ChangeEvent } from 'react';
+import {
+  type ComponentPropsWithoutRef,
+  type ChangeEvent,
+  type Ref,
+  forwardRef,
+} from 'react';
 import { RadioGroupContext } from './context';
 import { useRadioGroupValue } from './hooks';
 
-type PropsWithout = ComponentPropsWithoutRef<'div'> & {
+type TPropsWithout = ComponentPropsWithoutRef<'div'> & {
   onChange?: (event: ChangeEvent<HTMLInputElement>, value?: string) => void;
 };
 
-interface RadioGroupProps extends PropsWithout {
+interface IRadioGroupProps extends TPropsWithout {
   onChange?: (event: ChangeEvent<HTMLInputElement>, value?: string) => void;
   defaultValue: string | number;
   name?: string;
 }
 
-export const RadioGroup = ({
-  onChange,
-  defaultValue,
-  name: propName,
-  children,
-  ...otherProps
-}: RadioGroupProps) => {
-  const contextValue = useRadioGroupValue({
-    defaultValue,
-    propName,
-    onChange,
-  });
+export const RadioGroup = forwardRef(
+  (
+    {
+      onChange,
+      defaultValue,
+      name: propName,
+      children,
+      ...otherProps
+    }: IRadioGroupProps,
+    ref?: Ref<HTMLDivElement>,
+  ) => {
+    const contextValue = useRadioGroupValue({
+      defaultValue,
+      propName,
+      onChange,
+    });
 
-  return (
-    <RadioGroupContext.Provider value={contextValue}>
-      <div role="radiogroup" {...otherProps}>
-        {children}
-      </div>
-    </RadioGroupContext.Provider>
-  );
-};
+    return (
+      <RadioGroupContext.Provider value={contextValue}>
+        <div role="radiogroup" {...otherProps} ref={ref}>
+          {children}
+        </div>
+      </RadioGroupContext.Provider>
+    );
+  },
+);

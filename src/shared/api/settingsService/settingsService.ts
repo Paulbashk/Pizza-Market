@@ -1,18 +1,22 @@
 import { type AxiosResponse } from 'axios';
 import { ApiClient } from '@/shared/api';
 import { CategoryService } from '@/shared/api/categoryService';
-import type { FetchGetLogoResponse, FetchGetBannersResponse } from './types';
+import type {
+  TGetLogoResponse,
+  TGetBannersResponse,
+  IGetAllResponse,
+} from './types';
 
 const { error } = console;
 
 export const revalidate = 3600;
 
 export class SettingsService {
-  public static async fetchGetLogo<
-    T = FetchGetLogoResponse,
+  public static async getLogo<
+    T = TGetLogoResponse,
     R = AxiosResponse<T>,
     D = void,
-  >() {
+  >(): Promise<R | undefined> {
     try {
       return await ApiClient.get<T, R, D>('/logo');
     } catch {
@@ -20,11 +24,11 @@ export class SettingsService {
     }
   }
 
-  public static async fetchGetBanners<
-    T = FetchGetBannersResponse,
+  public static async getBanners<
+    T = TGetBannersResponse,
     R = AxiosResponse<T>,
     D = void,
-  >() {
+  >(): Promise<R | undefined> {
     try {
       return await ApiClient.get<T, R, D>('/banners');
     } catch {
@@ -32,11 +36,11 @@ export class SettingsService {
     }
   }
 
-  public static async fetchAll() {
+  public static async getAll(): Promise<IGetAllResponse | undefined> {
     return Promise.all([
-      CategoryService.fetchGetAll(),
-      SettingsService.fetchGetLogo(),
-      SettingsService.fetchGetBanners(),
+      CategoryService.getAll(),
+      SettingsService.getLogo(),
+      SettingsService.getBanners(),
     ]).then(([dataCategories, dataLogo, dataBanners]) => {
       try {
         const { data: categories } = dataCategories!;

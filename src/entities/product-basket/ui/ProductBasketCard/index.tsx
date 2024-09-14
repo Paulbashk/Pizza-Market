@@ -1,55 +1,46 @@
 'use client';
 
-import Image from 'next/image';
+import { memo } from 'react';
 import { type EntityId } from '@reduxjs/toolkit';
 
 // hooks
-import { useBasketProduct } from '@/entities/product-basket/libs/hooks';
+import { useBasketProductById } from '../../libs/hooks';
 
 // types
-import { ProductBasket } from '@/entities/product-basket/model/types';
+import { type ProductBasket } from '../../model/types';
+
+// components
+import { ProductTitle } from '../ProductTitle';
+import { ProductImage } from '../ProductImage';
+import { ProductPanel } from '../ProductPanel';
 
 // assets
 import * as S from './styled';
 
-interface ProductBasketCardProps {
+interface IProductBasketCardProps {
   id: EntityId;
+  sale: ProductBasket.Sale;
   navigation?: ProductBasket.Navigation;
 }
 
+const ProductImageMemo = memo(ProductImage);
+const ProductTitleMemo = memo(ProductTitle);
+
 export const ProductBasketCard = ({
   id,
+  sale,
   navigation = {},
-}: ProductBasketCardProps) => {
-  const { buttonAdd, buttonDelete, buttonReduce } = navigation;
-
-  const { title, image, quantity, totalQuantity, descOptions, total } =
-    useBasketProduct(id);
+}: IProductBasketCardProps) => {
+  const { title, image, descOptions, ...other } = useBasketProductById(
+    id,
+    sale,
+  );
 
   return (
     <S.Product>
-      <S.WrapperImage>
-        <Image
-          src={image}
-          alt={title}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
-      </S.WrapperImage>
-      <S.WrapperInfo>
-        <S.Title>{title}</S.Title>
-        {descOptions && <p>{descOptions}</p>}
-      </S.WrapperInfo>
-      <S.Navigation>
-        {buttonAdd && buttonAdd(id)}
-        <S.Count>{quantity}</S.Count>
-        {buttonReduce && buttonReduce(id)}
-      </S.Navigation>
-      <S.WrapperPrice>
-        <S.TotalQuantityPrice>{totalQuantity} ₽</S.TotalQuantityPrice>
-        <S.TotalPrice>{total} ₽</S.TotalPrice>
-      </S.WrapperPrice>
-      {buttonDelete && <S.WrapperDelete>{buttonDelete(id)}</S.WrapperDelete>}
+      <ProductImageMemo image={image} title={title} />
+      <ProductTitleMemo title={title} desc={descOptions} />
+      <ProductPanel sale={sale} navigation={navigation} {...other} />
     </S.Product>
   );
 };

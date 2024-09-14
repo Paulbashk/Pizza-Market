@@ -1,4 +1,8 @@
-import { configureStore, Action, ThunkAction } from '@reduxjs/toolkit';
+import {
+  configureStore,
+  type Action,
+  type ThunkAction,
+} from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query/react';
 import {
   persistStore,

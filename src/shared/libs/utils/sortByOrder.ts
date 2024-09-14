@@ -1,7 +1,7 @@
 export const sortByOrder = <T extends string | number>(
   type: 'DESC' | 'ASC',
   itr: T[] | object,
-) =>
+): T[] | object =>
   (typeof itr === 'object' ? Object.values(itr) : itr).sort(
     (a: T, b: T): number => {
       const getValue = (value: string | number) =>

@@ -4,7 +4,6 @@ import {
   type ComponentPropsWithoutRef,
   type ReactElement,
   cloneElement,
-  useMemo,
 } from 'react';
 
 // hooks
@@ -12,7 +11,7 @@ import { useHandleStateDropdown, useDropdownEvents } from './hooks';
 
 import * as S from './styled';
 
-interface DropdownProps extends ComponentPropsWithoutRef<'div'> {
+interface IDropdownProps extends ComponentPropsWithoutRef<'div'> {
   trigger: ReactElement;
   items: Array<ReactElement>;
   onOpen?: (open: boolean) => boolean;
@@ -21,7 +20,7 @@ interface DropdownProps extends ComponentPropsWithoutRef<'div'> {
 }
 
 // Dropdown menu with tracking selections
-export const Dropdown = (props: DropdownProps) => {
+export const Dropdown = (props: IDropdownProps) => {
   const { onSelected, selected, onOpen, trigger, items, ...otherProps } = props;
   const { onClick: triggerOnClick, ...otherTriggerProps } = trigger.props;
 
@@ -38,21 +37,14 @@ export const Dropdown = (props: DropdownProps) => {
     setOpenWithOnOpen,
   });
 
-  const triggerMemo = useMemo(
-    () => ({
-      render: cloneElement(trigger, {
+  return (
+    <S.Dropdown ref={dropdownRef} {...otherProps}>
+      {cloneElement(trigger, {
         onClick: handleOpen,
         role: 'label',
         isActive: isOpen,
         ...otherTriggerProps,
-      }),
-    }),
-    [onSelected],
-  );
-
-  return (
-    <S.Dropdown ref={dropdownRef} {...otherProps}>
-      {triggerMemo.render}
+      })}
       {isOpen && items.length > 0 ? (
         <S.DropdownInner role="listbox">
           <S.DropdownContent>

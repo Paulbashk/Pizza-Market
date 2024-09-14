@@ -1,30 +1,45 @@
 import { type AppState } from '@/app/_root/store';
 import { type EntityId, createSelector } from '@reduxjs/toolkit';
-import { formatOptionsInString } from '@/entities/product-basket/libs/utils';
+import { arrayObjectFilterByKey, reduceSumByKey } from '@/shared/libs/utils';
 import { productsBasketAdapter } from './slice';
 
 const all = (state: AppState) => state.basket;
+
+export const getPrice = (state: AppState) => all(state).price;
+
+export const totalPrice = (state: AppState) => getPrice(state).count;
+
+export const sale = (state: AppState) => getPrice(state).sale;
 
 export const {
   selectIds: getIds,
   selectAll: getAll,
   selectEntities: getEntities,
   selectById: byId,
+  selectTotal,
 } = productsBasketAdapter.getSelectors(all);
 
-export const getById = (id: EntityId) =>
-  createSelector(getEntities, basketItems => {
-    const basketProductItem = basketItems[id]!;
+export const isEmptyBasket = (state: AppState) => selectTotal(state) <= 0;
 
-    const { productId, options, totalQuantity, quantity, ...other } =
-      basketProductItem;
+export const getAllData = createSelector(
+  [getAll, getPrice],
+  (items, price) => ({
+    items,
+    price,
+    countItems: reduceSumByKey(items, 'quantity'),
+  }),
+);
 
-    const descOptions = options && formatOptionsInString(options);
+export const getIdsWithSale = createSelector([getIds, sale], (ids, _sale) => ({
+  ids: [...ids].reverse(),
+  sale: _sale,
+}));
 
-    return {
-      descOptions,
-      quantity,
-      totalQuantity,
-      ...other,
-    };
+export const getQuantityByProductId = (productId: EntityId) =>
+  createSelector([getAll], items => {
+    const filteredItems = arrayObjectFilterByKey(items, 'productId', productId);
+
+    return filteredItems.length > 0
+      ? reduceSumByKey(filteredItems, 'quantity')
+      : 0;
   });

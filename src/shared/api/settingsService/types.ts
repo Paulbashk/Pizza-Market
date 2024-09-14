@@ -1,10 +1,10 @@
 import type { ILogo, IBanner, ICategory } from '@/shared/types/interfaces';
 
-export interface FetchAllResponse {
+export interface IGetAllResponse {
   categories: ICategory[];
   logo: ILogo;
   banners: IBanner[];
 }
 
-export type FetchGetLogoResponse = ILogo;
-export type FetchGetBannersResponse = IBanner[];
+export type TGetLogoResponse = ILogo;
+export type TGetBannersResponse = IBanner[];

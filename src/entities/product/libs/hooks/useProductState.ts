@@ -1,15 +1,40 @@
-import { useState } from 'react';
-import { EntityId } from '@reduxjs/toolkit';
-import { useSelector } from 'react-redux';
-import { type ProductCardState } from '@/entities/product/ui/ProductCard/types';
-import { getByIdWithCalc } from '@/entities/product/model/selectors';
+'use client';
 
-export const useProductState = (id: EntityId) => {
-  const state = useSelector(getByIdWithCalc(id));
+import { type EntityId } from '@reduxjs/toolkit';
+import { type Dispatch, type SetStateAction, useState } from 'react';
+import { type IProductCardState } from '../../ui/ProductCard/types';
+import { type TUseProductByIdReturn, useProductById } from './useProductById';
+import { type Product } from '../../model/types';
+import { defaultProductState } from '../utils';
 
-  const [totalPrice, setTotalPrice] = useState<ProductCardState>({
-    ...state.price,
+type TUseProductReturn = {
+  state: TUseProductByIdReturn;
+  price: IProductCardState;
+  setPrice: Dispatch<SetStateAction<IProductCardState>>;
+  defaultState: {
+    total: {
+      count: number;
+      saleCount: number;
+    };
+    options: Product.TransformOption | undefined;
+  };
+};
+
+export const useProductState = (
+  id: EntityId,
+  sale: Product.Sale,
+): TUseProductReturn => {
+  const state = useProductById(id);
+
+  const { options, total } = state.price;
+
+  const defaultState = defaultProductState({
+    total,
+    options,
+    sale,
   });
 
-  return { state, totalPrice, setTotalPrice };
+  const [price, setPrice] = useState<IProductCardState>({ ...defaultState });
+
+  return { state, price, setPrice, defaultState };
 };

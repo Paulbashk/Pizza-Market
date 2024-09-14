@@ -1,15 +1,15 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import type { HandleReject } from '@/shared/libs/types';
+import type { THandleReject } from '@/shared/types';
 import {
   ProductService,
-  type FetchGetAllRequest,
-  type FetchGetAllResponse,
-} from '@/entities/product/api';
+  type TFetchGetAllRequest,
+  type TFetchGetAllResponse,
+} from '@/shared/api/productService';
 
 export const getProductsThunk = createAsyncThunk<
-  FetchGetAllResponse,
-  FetchGetAllRequest,
-  HandleReject
+  TFetchGetAllResponse,
+  TFetchGetAllRequest,
+  THandleReject
 >('products/fetchAll', async (params, { rejectWithValue }) => {
   try {
     const { data } = await ProductService.fetchGetAll(params);
